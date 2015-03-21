@@ -11,3 +11,8 @@ Keep a Changelog, and the project uses semantic versioning.
 
 ## [1.0.2] - 2026-06-23
 
+### Fixed
+
+- Ties in modal share resolve to the lexicographically smallest path id, so
+  two runs over the same export are identical.
+
