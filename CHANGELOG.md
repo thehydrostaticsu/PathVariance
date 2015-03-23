@@ -16,3 +16,8 @@ Keep a Changelog, and the project uses semantic versioning.
 - Ties in modal share resolve to the lexicographically smallest path id, so
   two runs over the same export are identical.
 
+## [1.0.1] - 2025-10-07
+
+### Fixed
+
+- Normalised entropy divides by the entropy of the observed path count, not
