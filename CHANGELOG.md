@@ -32,3 +32,8 @@ Keep a Changelog, and the project uses semantic versioning.
 - Tests pin the divergence arithmetic across the bundled export.
 
 ## [0.9.0] - 2023-07-18
+
+### Added
+
+- Full report mode: distribution, entropy, and divergence in one run.
+
