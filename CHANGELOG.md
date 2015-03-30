@@ -21,3 +21,9 @@ Keep a Changelog, and the project uses semantic versioning.
 ### Fixed
 
 - Normalised entropy divides by the entropy of the observed path count, not
+  the theoretical maximum, so a two path export can reach 1.0.
+
+## [1.0.0] - 2024-09-24
+
+### Added
+
