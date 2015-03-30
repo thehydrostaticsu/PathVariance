@@ -27,3 +27,8 @@ Keep a Changelog, and the project uses semantic versioning.
 
 ### Added
 
+- Stable CLI contract for paths, entropy, diverge, report, and version, exit
+  codes 0/1/2.
+- Tests pin the divergence arithmetic across the bundled export.
+
+## [0.9.0] - 2023-07-18
