@@ -37,3 +37,8 @@ Keep a Changelog, and the project uses semantic versioning.
 
 - Full report mode: distribution, entropy, and divergence in one run.
 
+## [0.8.0] - 2022-11-08
+
+### Added
+
+- Argument sensitivity as a control on the canonicaliser.
