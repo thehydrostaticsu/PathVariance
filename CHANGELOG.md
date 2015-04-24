@@ -42,3 +42,8 @@ Keep a Changelog, and the project uses semantic versioning.
 ### Added
 
 - Argument sensitivity as a control on the canonicaliser.
+
+## [0.7.0] - 2021-03-30
+
+### Added
+
