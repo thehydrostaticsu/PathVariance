@@ -47,3 +47,8 @@ Keep a Changelog, and the project uses semantic versioning.
 
 ### Added
 
+- A 12 run sample export and the README walkthrough captured from it.
+
+## [0.6.0] - 2020-09-22
+
+### Added
