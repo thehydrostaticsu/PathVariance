@@ -52,3 +52,8 @@ Keep a Changelog, and the project uses semantic versioning.
 ## [0.6.0] - 2020-09-22
 
 ### Added
+
+- Test suite covering runs, canon, and the CLI.
+
+## [0.5.0] - 2019-06-11
+
