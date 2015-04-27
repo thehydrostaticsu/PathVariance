@@ -57,3 +57,8 @@ Keep a Changelog, and the project uses semantic versioning.
 
 ## [0.5.0] - 2019-06-11
 
+### Added
+
+- Report renderer with line oriented, deterministic output.
+- CLI entry point with subcommands.
+
