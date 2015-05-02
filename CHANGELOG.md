@@ -67,3 +67,8 @@ Keep a Changelog, and the project uses semantic versioning.
 ### Added
 
 - First divergence index and per step agreement against the modal path.
+
+## [0.3.0] - 2017-05-23
+
+### Added
+
