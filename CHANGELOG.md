@@ -62,3 +62,8 @@ Keep a Changelog, and the project uses semantic versioning.
 - Report renderer with line oriented, deterministic output.
 - CLI entry point with subcommands.
 
+## [0.4.0] - 2018-10-09
+
+### Added
+
+- First divergence index and per step agreement against the modal path.
