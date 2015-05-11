@@ -3,3 +3,4 @@ message: "If you use this software, please cite it using these metadata."
 title: "PathVariance"
 abstract: >-
   A command line tool that measures whether an AI agent solves the same task
+  the same way twice, by canonicalising repeated runs into path signatures and
