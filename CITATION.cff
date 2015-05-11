@@ -4,3 +4,4 @@ title: "PathVariance"
 abstract: >-
   A command line tool that measures whether an AI agent solves the same task
   the same way twice, by canonicalising repeated runs into path signatures and
+  reporting the path distribution, Shannon entropy, and first divergence index.
