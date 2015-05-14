@@ -8,3 +8,5 @@ abstract: >-
 type: software
 authors:
   - name: "the PathVariance authors"
+version: "0.1.0"
+date-released: "2026-09-02"
