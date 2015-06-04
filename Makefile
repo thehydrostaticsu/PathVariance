@@ -5,3 +5,4 @@ export PYTHONPATH := src
 
 .PHONY: help test verify run clean
 
+help:  ## Show this help
