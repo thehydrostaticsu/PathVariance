@@ -11,3 +11,5 @@ help:  ## Show this help
 	@echo "  make verify  run the quality gate in scripts/verify.py"
 	@echo "  make run     run the full report against the sample export"
 	@echo "  make clean   remove Python caches and build artifacts"
+
+test:  ## Run the test suite
