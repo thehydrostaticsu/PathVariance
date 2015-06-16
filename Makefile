@@ -9,3 +9,5 @@ help:  ## Show this help
 	@echo "PathVariance targets:"
 	@echo "  make test    run the unittest suite"
 	@echo "  make verify  run the quality gate in scripts/verify.py"
+	@echo "  make run     run the full report against the sample export"
+	@echo "  make clean   remove Python caches and build artifacts"
