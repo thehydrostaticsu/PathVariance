@@ -13,3 +13,4 @@ help:  ## Show this help
 	@echo "  make clean   remove Python caches and build artifacts"
 
 test:  ## Run the test suite
+	$(PYTHON) -m unittest discover -s tests -v
