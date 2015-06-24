@@ -16,3 +16,4 @@ test:  ## Run the test suite
 	$(PYTHON) -m unittest discover -s tests -v
 
 verify:  ## Run the quality gate
+	$(PYTHON) scripts/verify.py
