@@ -17,3 +17,5 @@ test:  ## Run the test suite
 
 verify:  ## Run the quality gate
 	$(PYTHON) scripts/verify.py
+
+run:  ## Run the report against the sample export
