@@ -17,3 +17,10 @@ each run is the ordered sequence of tool calls the agent made. A tool call has
 a name and, optionally, arguments. The parser is strict about structure and
 permissive about extra fields, so a richer export from a real harness still
 loads.
+
+## Commands
+
+| Command | What it prints |
+|---|---|
+| `paths` | the path distribution table: label, id, count, share, route |
+| `entropy` | distinct paths, modal share, Shannon entropy, normalised entropy |
