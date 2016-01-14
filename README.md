@@ -10,3 +10,10 @@ enough to say anything at all.
 It is offline and deterministic. The same export always produces the same
 report, byte for byte.
 
+## The export
+
+A repeated-run export is one JSON document: the task, and a list of runs where
+each run is the ordered sequence of tool calls the agent made. A tool call has
+a name and, optionally, arguments. The parser is strict about structure and
+permissive about extra fields, so a richer export from a real harness still
+loads.
