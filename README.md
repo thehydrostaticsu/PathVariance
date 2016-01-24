@@ -37,3 +37,9 @@ Exit codes: `0` a verdict was issued, `1` the run count is below the minimum,
 
 ```
 task: fix-null-deref-in-parser
+runs: 12
+distinct paths: 3
+
+label  id         count  share   path
+A      pe17777e0      8  66.7%  grep -> read -> edit -> test -> done
+B      pfddfbe1f      2  16.7%  grep -> read -> read -> edit -> test -> done
