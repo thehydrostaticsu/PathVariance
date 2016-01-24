@@ -24,3 +24,9 @@ loads.
 |---|---|
 | `paths` | the path distribution table: label, id, count, share, route |
 | `entropy` | distinct paths, modal share, Shannon entropy, normalised entropy |
+| `diverge` | first divergence index and per-step agreement against the modal path |
+| `report` | the full report: all of the above, in order |
+| `version` | the version string |
+
+Exit codes: `0` a verdict was issued, `1` the run count is below the minimum,
+`2` usage or parse error.
