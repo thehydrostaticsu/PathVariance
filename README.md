@@ -43,3 +43,10 @@ distinct paths: 3
 label  id         count  share   path
 A      pe17777e0      8  66.7%  grep -> read -> edit -> test -> done
 B      pfddfbe1f      2  16.7%  grep -> read -> read -> edit -> test -> done
+C      p6b61031c      2  16.7%  grep -> read -> test -> edit -> test -> done
+```
+
+`python -m pathvariance entropy samples/task-repeat.json`:
+
+```
+task: fix-null-deref-in-parser
