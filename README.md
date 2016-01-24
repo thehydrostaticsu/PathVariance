@@ -30,3 +30,10 @@ loads.
 
 Exit codes: `0` a verdict was issued, `1` the run count is below the minimum,
 `2` usage or parse error.
+
+## A real run
+
+`python -m pathvariance paths samples/task-repeat.json`:
+
+```
+task: fix-null-deref-in-parser
