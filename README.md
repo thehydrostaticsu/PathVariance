@@ -50,3 +50,10 @@ C      p6b61031c      2  16.7%  grep -> read -> test -> edit -> test -> done
 
 ```
 task: fix-null-deref-in-parser
+runs: 12
+distinct paths: 3
+modal path: A (pe17777e0)
+modal share: 66.7%
+shannon entropy: 1.252 bits
+normalised entropy: 0.790
+```
