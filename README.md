@@ -63,3 +63,10 @@ normalised entropy: 0.790
 ```
 task: fix-null-deref-in-parser
 runs: 12
+modal path: A (pe17777e0)
+first divergence index: 2
+
+step  agree  of     rate   modal token
+   0     12     12  100.0%  grep
+   1     12     12  100.0%  read
+   2      8     12   66.7%  edit
