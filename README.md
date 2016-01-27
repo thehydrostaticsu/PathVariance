@@ -57,3 +57,9 @@ modal share: 66.7%
 shannon entropy: 1.252 bits
 normalised entropy: 0.790
 ```
+
+`python -m pathvariance diverge samples/task-repeat.json`:
+
+```
+task: fix-null-deref-in-parser
+runs: 12
