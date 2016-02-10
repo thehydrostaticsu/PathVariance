@@ -70,3 +70,10 @@ step  agree  of     rate   modal token
    0     12     12  100.0%  grep
    1     12     12  100.0%  read
    2      8     12   66.7%  edit
+   3      8     12   66.7%  test
+   4      8     12   66.7%  done
+```
+
+Every run agrees on the opening moves and the disagreement starts at step 2:
+the modal path edits the file, while two runs read again first and two others
+test before editing. That is the debugging lead the tool exists to produce.
