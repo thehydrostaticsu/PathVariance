@@ -103,3 +103,10 @@ pathvariance/
     canon.py         path signatures, argument sensitivity
     distribution.py  distinct paths, modal share, Shannon entropy
     divergence.py    first divergence index, per-step agreement
+    stability.py     minimum-run-count gate and verdict
+    report.py        line-oriented deterministic rendering
+    cli.py           subcommands and exit codes
+  samples/           a 12-run export to try
+  tests/             suite per module and for the CLI
+  scripts/verify.py  the eight check quality gate
+```
