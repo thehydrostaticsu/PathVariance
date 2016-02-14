@@ -77,3 +77,9 @@ step  agree  of     rate   modal token
 Every run agrees on the opening moves and the disagreement starts at step 2:
 the modal path edits the file, while two runs read again first and two others
 test before editing. That is the debugging lead the tool exists to produce.
+
+## Path signatures
+
+A signature is the ordered sequence of tool calls, canonicalised into a stable
+id. The one control that matters is **argument sensitivity**: with it off, two
+runs that call the same tools in the same order but with different arguments
