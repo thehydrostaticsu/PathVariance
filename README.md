@@ -90,3 +90,9 @@ the same route" wants it off; "did it make the same decisions" wants it on.
 
 Three runs cannot describe a distribution. One path taking two of three runs
 looks like 67 percent stability, and the confidence interval around that is so
+wide the number misleads more than it informs. Below the minimum run count the
+tool refuses to issue entropy or a verdict and says why, instead of printing a
+figure that reads as authoritative.
+
+## Repository layout
+
