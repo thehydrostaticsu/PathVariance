@@ -96,3 +96,10 @@ figure that reads as authoritative.
 
 ## Repository layout
 
+```
+pathvariance/
+  src/pathvariance/
+    runs.py          strict repeated-run export parsing
+    canon.py         path signatures, argument sensitivity
+    distribution.py  distinct paths, modal share, Shannon entropy
+    divergence.py    first divergence index, per-step agreement
