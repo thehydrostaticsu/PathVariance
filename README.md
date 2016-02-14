@@ -83,3 +83,10 @@ test before editing. That is the debugging lead the tool exists to produce.
 A signature is the ordered sequence of tool calls, canonicalised into a stable
 id. The one control that matters is **argument sensitivity**: with it off, two
 runs that call the same tools in the same order but with different arguments
+share a path; with it on, they do not. Pick per question. "Did the agent take
+the same route" wants it off; "did it make the same decisions" wants it on.
+
+## The stability gate
+
+Three runs cannot describe a distribution. One path taking two of three runs
+looks like 67 percent stability, and the confidence interval around that is so
