@@ -8,3 +8,5 @@ version = "1.0.2"
 description = "Measure whether an agent solves the same task the same way twice."
 readme = "README.md"
 requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "PathVariance contributors" }]
