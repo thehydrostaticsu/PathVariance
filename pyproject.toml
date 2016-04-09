@@ -13,3 +13,5 @@ authors = [{ name = "PathVariance contributors" }]
 keywords = ["agent", "evaluation", "tool-path", "entropy", "reproducibility"]
 
 [project.scripts]
+pathvariance = "pathvariance.cli:main"
+
