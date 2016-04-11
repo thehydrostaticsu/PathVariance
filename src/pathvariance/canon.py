@@ -12,3 +12,8 @@ user's, because whether an argument difference is a genuine route difference is
 a judgement about the task, not something the tool can decide.
 
 A ``PathSignature`` is deliberately a tuple of strings rather than a hash. The
+readable form is what a report prints, and the tuple compares and comes out of
+a dictionary deterministically, so identical input gives byte-identical output.
+"""
+
+from __future__ import annotations
