@@ -17,3 +17,8 @@ a dictionary deterministically, so identical input gives byte-identical output.
 """
 
 from __future__ import annotations
+
+import hashlib
+from dataclasses import dataclass
+
+from pathvariance.runs import Run, Step
