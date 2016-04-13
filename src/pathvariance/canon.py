@@ -22,3 +22,8 @@ import hashlib
 from dataclasses import dataclass
 
 from pathvariance.runs import Run, Step
+
+
+@dataclass(frozen=True)
+class CanonOptions:
+    """How to canonicalise. Defaults match the conservative reading."""
