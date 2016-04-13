@@ -27,3 +27,8 @@ from pathvariance.runs import Run, Step
 @dataclass(frozen=True)
 class CanonOptions:
     """How to canonicalise. Defaults match the conservative reading."""
+
+    argument_sensitive: bool = False
+    # When set, a tool's calls are collapsed to one step no matter how many
+    # times it repeats in a row. This models "used grep" rather than "used grep
+    # three times". Off by default, because repetition is often signal.
