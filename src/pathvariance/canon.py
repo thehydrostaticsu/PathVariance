@@ -32,3 +32,8 @@ class CanonOptions:
     # When set, a tool's calls are collapsed to one step no matter how many
     # times it repeats in a row. This models "used grep" rather than "used grep
     # three times". Off by default, because repetition is often signal.
+    collapse_repeats: bool = False
+
+
+def _step_token(step: Step, options: CanonOptions) -> str:
+    if not options.argument_sensitive:
