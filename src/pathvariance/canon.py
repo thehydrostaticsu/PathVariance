@@ -37,3 +37,8 @@ class CanonOptions:
 
 def _step_token(step: Step, options: CanonOptions) -> str:
     if not options.argument_sensitive:
+        return step.tool
+    return f"{step.tool}({step.arg_signature()})"
+
+
+def canonicalise(run: Run, options: CanonOptions | None = None) -> tuple[str, ...]:
