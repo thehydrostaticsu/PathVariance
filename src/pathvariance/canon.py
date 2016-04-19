@@ -47,3 +47,8 @@ def canonicalise(run: Run, options: CanonOptions | None = None) -> tuple[str, ..
     tokens: list[str] = []
     for step in run.steps:
         token = _step_token(step, opts)
+        if opts.collapse_repeats and tokens and tokens[-1] == token:
+            continue
+        tokens.append(token)
+    return tuple(tokens)
+
