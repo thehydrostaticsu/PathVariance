@@ -42,3 +42,8 @@ def _step_token(step: Step, options: CanonOptions) -> str:
 
 
 def canonicalise(run: Run, options: CanonOptions | None = None) -> tuple[str, ...]:
+    """Return the ordered path signature for one run."""
+    opts = options or CanonOptions()
+    tokens: list[str] = []
+    for step in run.steps:
+        token = _step_token(step, opts)
