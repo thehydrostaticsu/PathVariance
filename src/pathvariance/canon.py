@@ -57,3 +57,8 @@ def signature_id(signature: tuple[str, ...]) -> str:
     """A short stable identifier for a signature, for compact labelling.
 
     This is a truncated SHA-256 over the joined tokens. It is not used for any
+    security purpose, only to give each distinct path a stable short handle
+    such as ``p1a2b3c4`` in reports and assets.
+    """
+    joined = "\x1f".join(signature)
+    digest = hashlib.sha256(joined.encode("utf-8")).hexdigest()
