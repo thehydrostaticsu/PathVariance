@@ -52,3 +52,8 @@ def canonicalise(run: Run, options: CanonOptions | None = None) -> tuple[str, ..
         tokens.append(token)
     return tuple(tokens)
 
+
+def signature_id(signature: tuple[str, ...]) -> str:
+    """A short stable identifier for a signature, for compact labelling.
+
+    This is a truncated SHA-256 over the joined tokens. It is not used for any
