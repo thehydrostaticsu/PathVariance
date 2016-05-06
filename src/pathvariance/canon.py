@@ -67,3 +67,8 @@ def signature_id(signature: tuple[str, ...]) -> str:
 
 def label_paths(signatures: list[tuple[str, ...]]) -> dict[tuple[str, ...], str]:
     """Assign ordinal labels A, B, C ... to signatures by first appearance.
+
+    Ordering follows first appearance in the given list so labels are stable
+    against the run order in the export, which keeps report output diffable.
+    """
+    labels: dict[tuple[str, ...], str] = {}
