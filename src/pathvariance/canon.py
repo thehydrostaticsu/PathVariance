@@ -62,3 +62,8 @@ def signature_id(signature: tuple[str, ...]) -> str:
     """
     joined = "\x1f".join(signature)
     digest = hashlib.sha256(joined.encode("utf-8")).hexdigest()
+    return "p" + digest[:8]
+
+
+def label_paths(signatures: list[tuple[str, ...]]) -> dict[tuple[str, ...], str]:
+    """Assign ordinal labels A, B, C ... to signatures by first appearance.
