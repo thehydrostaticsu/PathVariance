@@ -72,3 +72,8 @@ def label_paths(signatures: list[tuple[str, ...]]) -> dict[tuple[str, ...], str]
     against the run order in the export, which keeps report output diffable.
     """
     labels: dict[tuple[str, ...], str] = {}
+    ordinal = 0
+    for sig in signatures:
+        if sig not in labels:
+            labels[sig] = _ordinal_label(ordinal)
+            ordinal += 1
