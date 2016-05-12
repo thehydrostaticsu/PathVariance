@@ -14,3 +14,11 @@ Accepted top level shapes, all JSON:
       "task": "find-and-fix-null-deref",
       "runs": [
         {"run_id": "r01", "steps": [{"tool": "grep", "args": {...}}, ...]},
+        ...
+      ]
+    }
+
+2. A bare list of runs, when the task label is supplied out of band.
+
+Each step must carry a ``tool`` string. Arguments are optional and may live
+under ``args`` or ``arguments``; either is accepted and normalised to ``args``.
