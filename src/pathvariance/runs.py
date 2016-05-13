@@ -22,3 +22,11 @@ Accepted top level shapes, all JSON:
 
 Each step must carry a ``tool`` string. Arguments are optional and may live
 under ``args`` or ``arguments``; either is accepted and normalised to ``args``.
+An ``ok`` boolean and a ``result`` field are read if present and preserved on
+the step, because a caller may want to confirm that outcome parity held while
+path parity did not.
+
+Parsing never touches the network and never runs a subprocess. It only reads a
+file or a string.
+"""
+
