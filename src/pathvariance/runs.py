@@ -46,3 +46,11 @@ class ParseError(ValueError):
 class Step:
     """One tool call within a run."""
 
+    tool: str
+    args: dict[str, Any] = field(default_factory=dict)
+    ok: bool | None = None
+
+    def arg_signature(self) -> str:
+        """A stable string of the arguments, key sorted, for hashing.
+
+        Values are rendered with ``json.dumps`` so nested structures compare
