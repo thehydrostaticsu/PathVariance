@@ -30,3 +30,11 @@ Parsing never touches the network and never runs a subprocess. It only reads a
 file or a string.
 """
 
+from __future__ import annotations
+
+import json
+from dataclasses import dataclass, field
+from pathlib import Path
+from typing import Any
+
+
