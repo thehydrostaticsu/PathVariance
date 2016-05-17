@@ -38,3 +38,11 @@ from pathlib import Path
 from typing import Any
 
 
+class ParseError(ValueError):
+    """Raised when the export does not match an accepted shape."""
+
+
+@dataclass(frozen=True)
+class Step:
+    """One tool call within a run."""
+
