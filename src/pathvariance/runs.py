@@ -54,3 +54,11 @@ class Step:
         """A stable string of the arguments, key sorted, for hashing.
 
         Values are rendered with ``json.dumps`` so nested structures compare
+        deterministically. Missing arguments render as an empty object.
+        """
+        return json.dumps(self.args, sort_keys=True, separators=(",", ":"))
+
+
+@dataclass(frozen=True)
+class Run:
+    """One complete attempt at the task, an ordered list of steps."""
