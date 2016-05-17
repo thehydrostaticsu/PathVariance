@@ -62,3 +62,11 @@ class Step:
 @dataclass(frozen=True)
 class Run:
     """One complete attempt at the task, an ordered list of steps."""
+
+    run_id: str
+    steps: tuple[Step, ...]
+    outcome: bool | None = None
+
+    def tools(self) -> tuple[str, ...]:
+        return tuple(step.tool for step in self.steps)
+
