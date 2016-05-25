@@ -78,3 +78,11 @@ class Export:
     task: str
     runs: tuple[Run, ...]
 
+    def __len__(self) -> int:
+        return len(self.runs)
+
+
+def _coerce_step(raw: Any, run_id: str, index: int) -> Step:
+    if not isinstance(raw, dict):
+        raise ParseError(
+            f"run {run_id!r} step {index}: expected an object, got "
