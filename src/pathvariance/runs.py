@@ -70,3 +70,11 @@ class Run:
     def tools(self) -> tuple[str, ...]:
         return tuple(step.tool for step in self.steps)
 
+
+@dataclass(frozen=True)
+class Export:
+    """The full repeated-run export for a single task."""
+
+    task: str
+    runs: tuple[Run, ...]
+
