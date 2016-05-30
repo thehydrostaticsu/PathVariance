@@ -86,3 +86,11 @@ def _coerce_step(raw: Any, run_id: str, index: int) -> Step:
     if not isinstance(raw, dict):
         raise ParseError(
             f"run {run_id!r} step {index}: expected an object, got "
+            f"{type(raw).__name__}"
+        )
+    tool = raw.get("tool")
+    if not isinstance(tool, str) or not tool:
+        raise ParseError(
+            f"run {run_id!r} step {index}: missing a non-empty 'tool' string"
+        )
+    args = raw.get("args", raw.get("arguments", {}))
