@@ -110,3 +110,10 @@ def _coerce_step(raw: Any, run_id: str, index: int) -> Step:
 
 def _coerce_run(raw: Any, index: int) -> Run:
     if not isinstance(raw, dict):
+        raise ParseError(f"run {index}: expected an object")
+    run_id = raw.get("run_id")
+    if not isinstance(run_id, str) or not run_id:
+        run_id = f"run{index:03d}"
+    steps_raw = raw.get("steps")
+    if not isinstance(steps_raw, list):
+        raise ParseError(f"run {run_id!r}: 'steps' must be a list")
