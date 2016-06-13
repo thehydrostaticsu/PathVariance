@@ -102,3 +102,11 @@ def _coerce_step(raw: Any, run_id: str, index: int) -> Step:
         )
     ok = raw.get("ok")
     if ok is not None and not isinstance(ok, bool):
+        raise ParseError(
+            f"run {run_id!r} step {index}: 'ok' must be a boolean when present"
+        )
+    return Step(tool=tool, args=args, ok=ok)
+
+
+def _coerce_run(raw: Any, index: int) -> Run:
+    if not isinstance(raw, dict):
