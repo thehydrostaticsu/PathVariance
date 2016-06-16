@@ -117,3 +117,11 @@ def _coerce_run(raw: Any, index: int) -> Run:
     steps_raw = raw.get("steps")
     if not isinstance(steps_raw, list):
         raise ParseError(f"run {run_id!r}: 'steps' must be a list")
+    steps = tuple(
+        _coerce_step(step, run_id, i) for i, step in enumerate(steps_raw)
+    )
+    outcome = raw.get("outcome")
+    if outcome is not None and not isinstance(outcome, bool):
+        raise ParseError(f"run {run_id!r}: 'outcome' must be a boolean")
+    return Run(run_id=run_id, steps=steps, outcome=outcome)
+
