@@ -8,3 +8,10 @@ runs spread across paths. The three numbers a reader wants are:
 - Shannon entropy over the path distribution, which is zero when every run took
   one path and rises as the mass spreads out.
 
+Entropy is reported in bits (log base 2). Normalised entropy divides by
+``log2(k)`` where ``k`` is the number of distinct paths, giving a 0 to 1 scale
+that is comparable across tasks with different path counts. When ``k`` is 1 the
+normalised value is defined as 0, because there is no spread to measure.
+
+Ties for the modal path are broken by the ordinal label, so the result does not
+depend on run order in the export.
