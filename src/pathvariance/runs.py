@@ -133,3 +133,11 @@ def parse_export(data: Any, task: str | None = None) -> Export:
     of runs, ``task`` is required unless it defaults to the string ``task``.
     """
     if isinstance(data, dict) and "runs" in data:
+        label = task or data.get("task")
+        if not isinstance(label, str) or not label:
+            raise ParseError("export is missing a non-empty 'task' string")
+        runs_raw = data.get("runs")
+    elif isinstance(data, list):
+        label = task or "task"
+        runs_raw = data
+    else:
