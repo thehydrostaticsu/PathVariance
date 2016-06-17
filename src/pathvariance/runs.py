@@ -125,3 +125,11 @@ def _coerce_run(raw: Any, index: int) -> Run:
         raise ParseError(f"run {run_id!r}: 'outcome' must be a boolean")
     return Run(run_id=run_id, steps=steps, outcome=outcome)
 
+
+def parse_export(data: Any, task: str | None = None) -> Export:
+    """Turn already decoded JSON into an ``Export``.
+
+    ``task`` overrides or supplies the task label. When the data is a bare list
+    of runs, ``task`` is required unless it defaults to the string ``task``.
+    """
+    if isinstance(data, dict) and "runs" in data:
