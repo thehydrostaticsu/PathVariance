@@ -15,3 +15,11 @@ normalised value is defined as 0, because there is no spread to measure.
 
 Ties for the modal path are broken by the ordinal label, so the result does not
 depend on run order in the export.
+"""
+
+from __future__ import annotations
+
+import math
+from collections import Counter
+from dataclasses import dataclass
+
