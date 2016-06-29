@@ -30,3 +30,11 @@ from pathvariance.canon import label_paths, signature_id
 class PathStat:
     """One distinct path and how often it occurred."""
 
+    label: str
+    sig_id: str
+    signature: tuple[str, ...]
+    count: int
+    share: float
+
+
+@dataclass(frozen=True)
