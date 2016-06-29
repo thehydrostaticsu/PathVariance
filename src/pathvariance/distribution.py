@@ -23,3 +23,10 @@ import math
 from collections import Counter
 from dataclasses import dataclass
 
+from pathvariance.canon import label_paths, signature_id
+
+
+@dataclass(frozen=True)
+class PathStat:
+    """One distinct path and how often it occurred."""
+
