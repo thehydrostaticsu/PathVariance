@@ -38,3 +38,10 @@ class PathStat:
 
 
 @dataclass(frozen=True)
+class Distribution:
+    """The full path distribution for a set of runs."""
+
+    total_runs: int
+    paths: tuple[PathStat, ...]
+    entropy_bits: float
+    normalised_entropy: float
