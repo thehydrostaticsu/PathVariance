@@ -60,3 +60,11 @@ def shannon_entropy_bits(counts: list[int]) -> float:
     total = sum(counts)
     if total == 0:
         return 0.0
+    entropy = 0.0
+    for count in counts:
+        if count <= 0:
+            continue
+        p = count / total
+        entropy -= p * math.log2(p)
+    # A single populated category yields exactly 0.0; guard tiny negatives from
+    # floating point so the sign is never surprising.
