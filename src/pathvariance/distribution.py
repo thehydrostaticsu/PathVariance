@@ -45,3 +45,11 @@ class Distribution:
     paths: tuple[PathStat, ...]
     entropy_bits: float
     normalised_entropy: float
+
+    @property
+    def distinct(self) -> int:
+        return len(self.paths)
+
+    @property
+    def modal(self) -> PathStat:
+        return self.paths[0]
