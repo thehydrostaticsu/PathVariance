@@ -68,3 +68,10 @@ def shannon_entropy_bits(counts: list[int]) -> float:
         entropy -= p * math.log2(p)
     # A single populated category yields exactly 0.0; guard tiny negatives from
     # floating point so the sign is never surprising.
+    return abs(entropy)
+
+
+def build_distribution(signatures: list[tuple[str, ...]]) -> Distribution:
+    """Summarise the distribution of the given per-run signatures."""
+    total = len(signatures)
+    labels = label_paths(signatures)
