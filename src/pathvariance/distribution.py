@@ -53,3 +53,10 @@ class Distribution:
     @property
     def modal(self) -> PathStat:
         return self.paths[0]
+
+
+def shannon_entropy_bits(counts: list[int]) -> float:
+    """Shannon entropy in bits for a list of category counts."""
+    total = sum(counts)
+    if total == 0:
+        return 0.0
