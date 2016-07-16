@@ -75,3 +75,11 @@ def build_distribution(signatures: list[tuple[str, ...]]) -> Distribution:
     """Summarise the distribution of the given per-run signatures."""
     total = len(signatures)
     labels = label_paths(signatures)
+    counts = Counter(signatures)
+    # Sort by descending count, then by label to break ties stably.
+    ordered = sorted(
+        counts.items(), key=lambda item: (-item[1], labels[item[0]])
+    )
+    stats = tuple(
+        PathStat(
+            label=labels[sig],
