@@ -21,3 +21,11 @@ from enum import Enum
 from pathvariance.distribution import Distribution
 
 DEFAULT_MIN_RUNS = 5
+DEFAULT_THRESHOLD = 0.90
+
+
+class Verdict(str, Enum):
+    STABLE = "STABLE"
+    UNSTABLE = "UNSTABLE"
+    UNDER_MIN = "UNDER_MIN"
+
