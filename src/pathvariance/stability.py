@@ -7,3 +7,10 @@ module refuses to issue entropy or a verdict below a minimum run count and says
 why, rather than printing a figure that reads as authoritative.
 
 The verdict compares the modal share against a declared threshold. At or above
+the threshold the task is STABLE. Below it the task is UNSTABLE. When the run
+count is below the gate the verdict is UNDER_MIN and no share or entropy is
+asserted. The default gate is 5 and the default threshold is 0.90, both chosen
+to be conservative and both overridable from the CLI.
+"""
+
+from __future__ import annotations
