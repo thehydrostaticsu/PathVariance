@@ -14,3 +14,10 @@ to be conservative and both overridable from the CLI.
 """
 
 from __future__ import annotations
+
+from dataclasses import dataclass
+from enum import Enum
+
+from pathvariance.distribution import Distribution
+
+DEFAULT_MIN_RUNS = 5
