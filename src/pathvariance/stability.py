@@ -36,3 +36,10 @@ class StabilityResult:
 
     verdict: Verdict
     total_runs: int
+    min_runs: int
+    threshold: float
+    modal_share: float | None
+    reason: str
+
+    @property
+    def is_reportable(self) -> bool:
