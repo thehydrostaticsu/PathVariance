@@ -29,3 +29,10 @@ class Verdict(str, Enum):
     UNSTABLE = "UNSTABLE"
     UNDER_MIN = "UNDER_MIN"
 
+
+@dataclass(frozen=True)
+class StabilityResult:
+    """The verdict and the reasoning behind it."""
+
+    verdict: Verdict
+    total_runs: int
