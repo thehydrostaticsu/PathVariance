@@ -43,3 +43,10 @@ class StabilityResult:
 
     @property
     def is_reportable(self) -> bool:
+        """True when the run count clears the gate."""
+        return self.verdict is not Verdict.UNDER_MIN
+
+    @property
+    def exit_code(self) -> int:
+        """0 when stable, 1 otherwise, including the under-minimum refusal."""
+        return 0 if self.verdict is Verdict.STABLE else 1
