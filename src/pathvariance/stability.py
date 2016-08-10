@@ -50,3 +50,10 @@ class StabilityResult:
     def exit_code(self) -> int:
         """0 when stable, 1 otherwise, including the under-minimum refusal."""
         return 0 if self.verdict is Verdict.STABLE else 1
+
+
+def assess(
+    distribution: Distribution,
+    min_runs: int = DEFAULT_MIN_RUNS,
+    threshold: float = DEFAULT_THRESHOLD,
+) -> StabilityResult:
