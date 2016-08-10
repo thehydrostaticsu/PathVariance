@@ -57,3 +57,10 @@ def assess(
     min_runs: int = DEFAULT_MIN_RUNS,
     threshold: float = DEFAULT_THRESHOLD,
 ) -> StabilityResult:
+    """Assess stability, honouring the minimum-run-count gate first."""
+    total = distribution.total_runs
+    if total < min_runs:
+        return StabilityResult(
+            verdict=Verdict.UNDER_MIN,
+            total_runs=total,
+            min_runs=min_runs,
