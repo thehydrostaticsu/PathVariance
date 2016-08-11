@@ -64,3 +64,11 @@ def assess(
             verdict=Verdict.UNDER_MIN,
             total_runs=total,
             min_runs=min_runs,
+            threshold=threshold,
+            modal_share=None,
+            reason=(
+                f"{total} runs is below the minimum of {min_runs}; a "
+                "distribution over so few runs cannot be reported honestly, "
+                "so no share, entropy, or verdict is asserted"
+            ),
+        )
