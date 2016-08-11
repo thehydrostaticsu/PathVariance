@@ -72,3 +72,10 @@ def assess(
                 "so no share, entropy, or verdict is asserted"
             ),
         )
+    share = distribution.modal.share
+    if share >= threshold:
+        verdict = Verdict.STABLE
+        reason = (
+            f"modal path took {share:.1%} of {total} runs, at or above the "
+            f"{threshold:.0%} threshold"
+        )
