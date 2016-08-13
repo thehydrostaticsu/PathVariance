@@ -18,3 +18,14 @@ modal path exactly, which is the fully stable case.
 from __future__ import annotations
 
 from dataclasses import dataclass
+
+
+@dataclass(frozen=True)
+class StepAgreement:
+    """Agreement at one step index."""
+
+    index: int
+    modal_token: str
+    agreeing: int
+    considered: int
+
