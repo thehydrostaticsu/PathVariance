@@ -29,3 +29,13 @@ class StepAgreement:
     agreeing: int
     considered: int
 
+    @property
+    def rate(self) -> float:
+        return self.agreeing / self.considered if self.considered else 0.0
+
+
+@dataclass(frozen=True)
+class DivergenceReport:
+    """Where and how runs leave the modal path."""
+
+    modal_signature: tuple[str, ...]
