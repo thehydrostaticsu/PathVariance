@@ -50,3 +50,13 @@ class DivergenceReport:
 def _token_at(signature: tuple[str, ...], index: int) -> str | None:
     return signature[index] if index < len(signature) else None
 
+
+def analyse_divergence(
+    signatures: list[tuple[str, ...]], modal: tuple[str, ...]
+) -> DivergenceReport:
+    """Compute first divergence index and per-step agreement.
+
+    ``signatures`` is every run's signature. ``modal`` is the modal path to
+    compare against. Per-step agreement is measured for each index in the modal
+    path.
+    """
