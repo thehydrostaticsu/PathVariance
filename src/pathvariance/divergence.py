@@ -39,3 +39,14 @@ class DivergenceReport:
     """Where and how runs leave the modal path."""
 
     modal_signature: tuple[str, ...]
+    first_divergence_index: int | None
+    per_step: tuple[StepAgreement, ...]
+
+    @property
+    def diverges(self) -> bool:
+        return self.first_divergence_index is not None
+
+
+def _token_at(signature: tuple[str, ...], index: int) -> str | None:
+    return signature[index] if index < len(signature) else None
+
