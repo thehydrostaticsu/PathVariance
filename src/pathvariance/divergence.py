@@ -70,3 +70,14 @@ def analyse_divergence(
             token = _token_at(sig, index)
             if token is None:
                 # A run that has already ended is counted as a divergence at
+                # this index but does not count toward the agreement rate,
+                # which only measures runs that reached this step.
+                if first_divergence is None:
+                    first_divergence = index
+                continue
+            considered += 1
+            if token == modal_token:
+                agreeing += 1
+            elif first_divergence is None:
+                first_divergence = index
+        per_step.append(
