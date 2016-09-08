@@ -110,3 +110,22 @@ pathvariance/
   tests/             suite per module and for the CLI
   scripts/verify.py  the eight check quality gate
 ```
+
+## Why entropy and not a single score
+
+A single "stability score" hides the shape. Entropy says how spread the runs
+are; the distribution table shows which routes exist; divergence says where
+they part. Read together they tell a maintainer whether to fix the prompt, the
+tool descriptions, or nothing at all.
+
+## What it does not do
+
+- It does not run the agent. It reads exports the harness already produces.
+- It does not compare across tasks. One export is one task by design.
+- It does not guess. Below the minimum run count, it says so.
+
+## License
+
+MIT. See `LICENSE`.
+
+<!-- draft note 47 -->
