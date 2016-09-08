@@ -60,3 +60,13 @@ def analyse_divergence(
     compare against. Per-step agreement is measured for each index in the modal
     path.
     """
+    per_step: list[StepAgreement] = []
+    first_divergence: int | None = None
+    for index in range(len(modal)):
+        modal_token = modal[index]
+        agreeing = 0
+        considered = 0
+        for sig in signatures:
+            token = _token_at(sig, index)
+            if token is None:
+                # A run that has already ended is counted as a divergence at
