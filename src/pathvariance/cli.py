@@ -15,3 +15,17 @@ Exit codes:
     1   the task is below the declared stability threshold, or below the
         minimum run count so no verdict could be issued
     2   usage or input error
+
+The stability-driven subcommands (report) exit 1 when the verdict is not
+STABLE, so the tool is usable as a gate in continuous integration.
+"""
+
+from __future__ import annotations
+
+import argparse
+import sys
+
+from pathvariance import __version__
+from pathvariance.canon import CanonOptions
+from pathvariance.distribution import build_distribution
+from pathvariance.divergence import analyse_divergence
