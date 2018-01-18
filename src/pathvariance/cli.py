@@ -29,3 +29,17 @@ from pathvariance import __version__
 from pathvariance.canon import CanonOptions
 from pathvariance.distribution import build_distribution
 from pathvariance.divergence import analyse_divergence
+from pathvariance.report import (
+    diverge_lines,
+    entropy_lines,
+    full_report,
+    paths_lines,
+    signatures_for,
+)
+from pathvariance.runs import ParseError, load_export
+from pathvariance.stability import (
+    DEFAULT_MIN_RUNS,
+    DEFAULT_THRESHOLD,
+    Verdict,
+    assess,
+)
