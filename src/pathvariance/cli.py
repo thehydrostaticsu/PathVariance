@@ -72,3 +72,17 @@ def _add_gate(parser: argparse.ArgumentParser) -> None:
         type=int,
         default=DEFAULT_MIN_RUNS,
         help=f"minimum run count gate (default {DEFAULT_MIN_RUNS})",
+    )
+    parser.add_argument(
+        "--threshold",
+        type=float,
+        default=DEFAULT_THRESHOLD,
+        help=f"stable modal share threshold (default {DEFAULT_THRESHOLD})",
+    )
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        prog="pathvariance",
+        description="Measure whether an agent takes the same tool path twice.",
+    )
