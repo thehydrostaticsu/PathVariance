@@ -43,3 +43,18 @@ from pathvariance.stability import (
     Verdict,
     assess,
 )
+
+USAGE_ERROR = 2
+
+
+def _add_common(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument("export", help="path to the repeated-run export JSON")
+    parser.add_argument(
+        "--task",
+        default=None,
+        help="task label, when the export is a bare list of runs",
+    )
+    parser.add_argument(
+        "--args-sensitive",
+        action="store_true",
+        help="treat differing arguments as different paths",
