@@ -58,3 +58,17 @@ def _add_common(parser: argparse.ArgumentParser) -> None:
         "--args-sensitive",
         action="store_true",
         help="treat differing arguments as different paths",
+    )
+    parser.add_argument(
+        "--collapse-repeats",
+        action="store_true",
+        help="collapse an immediately repeated tool call to one step",
+    )
+
+
+def _add_gate(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument(
+        "--min-runs",
+        type=int,
+        default=DEFAULT_MIN_RUNS,
+        help=f"minimum run count gate (default {DEFAULT_MIN_RUNS})",
