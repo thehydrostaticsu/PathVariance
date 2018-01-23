@@ -115,3 +115,17 @@ def _options(args: argparse.Namespace) -> CanonOptions:
 
 def _emit(lines: list[str]) -> None:
     sys.stdout.write("\n".join(lines) + "\n")
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = build_parser()
+    args = parser.parse_args(argv)
+
+    if args.command == "version":
+        _emit([f"pathvariance {__version__}"])
+        return 0
+
+    try:
+        export = load_export(args.export, task=args.task)
+    except ParseError as exc:
+        sys.stderr.write(f"error: {exc}\n")
