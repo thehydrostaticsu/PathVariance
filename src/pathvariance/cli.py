@@ -86,3 +86,18 @@ def build_parser() -> argparse.ArgumentParser:
         prog="pathvariance",
         description="Measure whether an agent takes the same tool path twice.",
     )
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    p_paths = sub.add_parser("paths", help="print the path distribution table")
+    _add_common(p_paths)
+
+    p_entropy = sub.add_parser("entropy", help="print modal share and entropy")
+    _add_common(p_entropy)
+    _add_gate(p_entropy)
+
+    p_diverge = sub.add_parser("diverge", help="print divergence analysis")
+    _add_common(p_diverge)
+
+    p_report = sub.add_parser("report", help="print the full report")
+    _add_common(p_report)
+    _add_gate(p_report)
