@@ -101,3 +101,17 @@ def build_parser() -> argparse.ArgumentParser:
     p_report = sub.add_parser("report", help="print the full report")
     _add_common(p_report)
     _add_gate(p_report)
+
+    sub.add_parser("version", help="print the version and exit")
+    return parser
+
+
+def _options(args: argparse.Namespace) -> CanonOptions:
+    return CanonOptions(
+        argument_sensitive=args.args_sensitive,
+        collapse_repeats=args.collapse_repeats,
+    )
+
+
+def _emit(lines: list[str]) -> None:
+    sys.stdout.write("\n".join(lines) + "\n")
