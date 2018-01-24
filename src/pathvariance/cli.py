@@ -129,3 +129,17 @@ def main(argv: list[str] | None = None) -> int:
         export = load_export(args.export, task=args.task)
     except ParseError as exc:
         sys.stderr.write(f"error: {exc}\n")
+        return USAGE_ERROR
+
+    options = _options(args)
+
+    if args.command == "paths":
+        signatures = signatures_for(export, options)
+        dist = build_distribution(signatures)
+        _emit(paths_lines(export, dist))
+        return 0
+
+    if args.command == "entropy":
+        signatures = signatures_for(export, options)
+        dist = build_distribution(signatures)
+        stability = assess(
