@@ -24,3 +24,15 @@ def signatures_for(export: Export, options: CanonOptions) -> list[tuple[str, ...
 
 def _sig_text(signature: tuple[str, ...]) -> str:
     return " -> ".join(signature) if signature else "(empty)"
+
+
+def paths_lines(export: Export, dist: Distribution) -> list[str]:
+    lines = [
+        f"task: {export.task}",
+        f"runs: {dist.total_runs}",
+        f"distinct paths: {dist.distinct}",
+        "",
+        "label  id         count  share   path",
+    ]
+    for stat in dist.paths:
+        lines.append(
