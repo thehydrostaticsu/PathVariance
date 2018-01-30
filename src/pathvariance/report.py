@@ -36,3 +36,16 @@ def paths_lines(export: Export, dist: Distribution) -> list[str]:
     ]
     for stat in dist.paths:
         lines.append(
+            f"{stat.label:<5}  {stat.sig_id}  {stat.count:>5}  "
+            f"{stat.share:>5.1%}  {_sig_text(stat.signature)}"
+        )
+    return lines
+
+
+def entropy_lines(export: Export, dist: Distribution) -> list[str]:
+    return [
+        f"task: {export.task}",
+        f"runs: {dist.total_runs}",
+        f"distinct paths: {dist.distinct}",
+        f"modal path: {dist.modal.label} ({dist.modal.sig_id})",
+        f"modal share: {dist.modal.share:.1%}",
