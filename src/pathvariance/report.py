@@ -11,3 +11,16 @@ with three decimals.
 
 from __future__ import annotations
 
+from pathvariance.canon import CanonOptions, canonicalise
+from pathvariance.distribution import Distribution, build_distribution
+from pathvariance.divergence import DivergenceReport, analyse_divergence
+from pathvariance.runs import Export
+from pathvariance.stability import StabilityResult, assess
+
+
+def signatures_for(export: Export, options: CanonOptions) -> list[tuple[str, ...]]:
+    return [canonicalise(run, options) for run in export.runs]
+
+
+def _sig_text(signature: tuple[str, ...]) -> str:
+    return " -> ".join(signature) if signature else "(empty)"
