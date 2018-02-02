@@ -62,3 +62,15 @@ def diverge_lines(
     else:
         first = str(div.first_divergence_index)
     lines = [
+        f"task: {export.task}",
+        f"runs: {dist.total_runs}",
+        f"modal path: {dist.modal.label} ({dist.modal.sig_id})",
+        f"first divergence index: {first}",
+        "",
+        "step  agree  of     rate   modal token",
+    ]
+    for step in div.per_step:
+        lines.append(
+            f"{step.index:>4}  {step.agreeing:>5}  {step.considered:>5}  "
+            f"{step.rate:>5.1%}  {step.modal_token}"
+        )
