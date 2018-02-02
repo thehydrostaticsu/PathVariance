@@ -49,3 +49,16 @@ def entropy_lines(export: Export, dist: Distribution) -> list[str]:
         f"distinct paths: {dist.distinct}",
         f"modal path: {dist.modal.label} ({dist.modal.sig_id})",
         f"modal share: {dist.modal.share:.1%}",
+        f"shannon entropy: {dist.entropy_bits:.3f} bits",
+        f"normalised entropy: {dist.normalised_entropy:.3f}",
+    ]
+
+
+def diverge_lines(
+    export: Export, dist: Distribution, div: DivergenceReport
+) -> list[str]:
+    if div.first_divergence_index is None:
+        first = "none (every run matched the modal path)"
+    else:
+        first = str(div.first_divergence_index)
+    lines = [
