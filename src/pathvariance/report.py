@@ -99,3 +99,16 @@ def full_report(
     """The combined report used by the ``report`` subcommand.
 
     Returns the report lines and the stability result so the CLI can set its
+    exit code from the same assessment the report describes.
+    """
+    signatures = signatures_for(export, options)
+    dist = build_distribution(signatures)
+    stability = assess(dist, min_runs=min_runs, threshold=threshold)
+
+    lines: list[str] = []
+    lines.append("== pathvariance report ==")
+    lines.append(f"task: {export.task}")
+    lines.append(
+        "argument sensitivity: "
+        + ("on" if options.argument_sensitive else "off")
+    )
