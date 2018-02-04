@@ -87,3 +87,15 @@ def stability_lines(stability: StabilityResult) -> list[str]:
     if stability.modal_share is not None:
         lines.append(f"modal share: {stability.modal_share:.1%}")
     lines.append(f"reason: {stability.reason}")
+    return lines
+
+
+def full_report(
+    export: Export,
+    options: CanonOptions,
+    min_runs: int,
+    threshold: float,
+) -> tuple[list[str], StabilityResult]:
+    """The combined report used by the ``report`` subcommand.
+
+    Returns the report lines and the stability result so the CLI can set its
