@@ -74,3 +74,16 @@ def diverge_lines(
             f"{step.index:>4}  {step.agreeing:>5}  {step.considered:>5}  "
             f"{step.rate:>5.1%}  {step.modal_token}"
         )
+    return lines
+
+
+def stability_lines(stability: StabilityResult) -> list[str]:
+    lines = [
+        f"verdict: {stability.verdict.value}",
+        f"runs: {stability.total_runs}",
+        f"minimum runs: {stability.min_runs}",
+        f"threshold: {stability.threshold:.0%}",
+    ]
+    if stability.modal_share is not None:
+        lines.append(f"modal share: {stability.modal_share:.1%}")
+    lines.append(f"reason: {stability.reason}")
