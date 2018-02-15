@@ -21,3 +21,11 @@ class TestCanon(unittest.TestCase):
     def test_tool_only_by_default(self):
         run = _run(["grep", "read"], {0: {"p": "x"}})
         self.assertEqual(canonicalise(run), ("grep", "read"))
+
+    def test_argument_sensitive_distinguishes(self):
+        opts = CanonOptions(argument_sensitive=True)
+        r1 = _run(["grep"], {0: {"p": "a"}})
+        r2 = _run(["grep"], {0: {"p": "b"}})
+        self.assertNotEqual(canonicalise(r1, opts), canonicalise(r2, opts))
+
+    def test_argument_insensitive_collapses(self):
