@@ -29,3 +29,11 @@ class TestCanon(unittest.TestCase):
         self.assertNotEqual(canonicalise(r1, opts), canonicalise(r2, opts))
 
     def test_argument_insensitive_collapses(self):
+        r1 = _run(["grep"], {0: {"p": "a"}})
+        r2 = _run(["grep"], {0: {"p": "b"}})
+        self.assertEqual(canonicalise(r1), canonicalise(r2))
+
+    def test_collapse_repeats(self):
+        opts = CanonOptions(collapse_repeats=True)
+        run = _run(["read", "read", "read", "edit"])
+        self.assertEqual(canonicalise(run, opts), ("read", "edit"))
