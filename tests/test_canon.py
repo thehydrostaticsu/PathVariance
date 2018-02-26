@@ -37,3 +37,11 @@ class TestCanon(unittest.TestCase):
         opts = CanonOptions(collapse_repeats=True)
         run = _run(["read", "read", "read", "edit"])
         self.assertEqual(canonicalise(run, opts), ("read", "edit"))
+
+    def test_no_collapse_by_default(self):
+        run = _run(["read", "read"])
+        self.assertEqual(canonicalise(run), ("read", "read"))
+
+    def test_signature_id_stable_and_prefixed(self):
+        sig = ("grep", "read")
+        self.assertTrue(signature_id(sig).startswith("p"))
