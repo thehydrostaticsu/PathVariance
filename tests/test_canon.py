@@ -45,3 +45,11 @@ class TestCanon(unittest.TestCase):
     def test_signature_id_stable_and_prefixed(self):
         sig = ("grep", "read")
         self.assertTrue(signature_id(sig).startswith("p"))
+        self.assertEqual(signature_id(sig), signature_id(sig))
+
+    def test_signature_id_differs(self):
+        self.assertNotEqual(signature_id(("a",)), signature_id(("b",)))
+
+    def test_labels_by_first_appearance(self):
+        sigs = [("a",), ("b",), ("a",), ("c",)]
+        labels = label_paths(sigs)
