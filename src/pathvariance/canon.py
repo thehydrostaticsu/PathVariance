@@ -77,3 +77,15 @@ def label_paths(signatures: list[tuple[str, ...]]) -> dict[tuple[str, ...], str]
         if sig not in labels:
             labels[sig] = _ordinal_label(ordinal)
             ordinal += 1
+    return labels
+
+
+def _ordinal_label(index: int) -> str:
+    """0 -> A, 1 -> B, ... 25 -> Z, 26 -> AA, and so on."""
+    letters = ""
+    n = index
+    while True:
+        letters = chr(ord("A") + (n % 26)) + letters
+        n = n // 26 - 1
+        if n < 0:
+            break
