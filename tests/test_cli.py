@@ -21,3 +21,10 @@ class TestCli(unittest.TestCase):
         self.assertEqual(code, 0)
         self.assertIn("pathvariance", out)
 
+    def test_paths_counts(self):
+        code, out, _ = _run(["paths", SAMPLE])
+        self.assertEqual(code, 0)
+        self.assertIn("distinct paths: 3", out)
+        self.assertIn("66.7%", out)
+
+    def test_entropy_value(self):
