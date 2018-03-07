@@ -13,3 +13,11 @@ def _run(argv):
     with redirect_stdout(out), redirect_stderr(err):
         code = main(argv)
     return code, out.getvalue(), err.getvalue()
+
+
+class TestCli(unittest.TestCase):
+    def test_version(self):
+        code, out, _ = _run(["version"])
+        self.assertEqual(code, 0)
+        self.assertIn("pathvariance", out)
+
