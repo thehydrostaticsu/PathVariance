@@ -44,3 +44,11 @@ class TestCli(unittest.TestCase):
 
     def test_report_stable_lower_threshold(self):
         code, out, _ = _run(["report", SAMPLE, "--threshold", "0.5"])
+        self.assertEqual(code, 0)
+        self.assertIn("STABLE", out)
+
+    def test_entropy_refused_under_min(self):
+        code, out, err = _run(["entropy", SAMPLE, "--min-runs", "20"])
+        self.assertEqual(code, 1)
+        self.assertIn("refused", err)
+        self.assertEqual(out, "")
