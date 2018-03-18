@@ -36,3 +36,11 @@ class TestCli(unittest.TestCase):
         code, out, _ = _run(["diverge", SAMPLE])
         self.assertEqual(code, 0)
         self.assertIn("first divergence index: 2", out)
+
+    def test_report_exits_one_when_unstable(self):
+        code, out, _ = _run(["report", SAMPLE])
+        self.assertEqual(code, 1)
+        self.assertIn("UNSTABLE", out)
+
+    def test_report_stable_lower_threshold(self):
+        code, out, _ = _run(["report", SAMPLE, "--threshold", "0.5"])
