@@ -28,3 +28,11 @@ class TestCli(unittest.TestCase):
         self.assertIn("66.7%", out)
 
     def test_entropy_value(self):
+        code, out, _ = _run(["entropy", SAMPLE])
+        self.assertEqual(code, 0)
+        self.assertIn("1.252 bits", out)
+
+    def test_diverge_index(self):
+        code, out, _ = _run(["diverge", SAMPLE])
+        self.assertEqual(code, 0)
+        self.assertIn("first divergence index: 2", out)
