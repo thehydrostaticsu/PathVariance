@@ -52,3 +52,11 @@ class TestCli(unittest.TestCase):
         self.assertEqual(code, 1)
         self.assertIn("refused", err)
         self.assertEqual(out, "")
+
+    def test_report_withholds_under_min(self):
+        code, out, _ = _run(["report", SAMPLE, "--min-runs", "20"])
+        self.assertEqual(code, 1)
+        self.assertIn("UNDER_MIN", out)
+        self.assertIn("withheld", out)
+
+    def test_args_sensitive_changes_nothing_here(self):
