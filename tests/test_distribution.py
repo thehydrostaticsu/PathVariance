@@ -19,3 +19,11 @@ class TestEntropy(unittest.TestCase):
 
     def test_no_negative_zero(self):
         self.assertEqual(shannon_entropy_bits([7]), 0.0)
+
+
+class TestDistribution(unittest.TestCase):
+    def setUp(self):
+        # 8 of A, 2 of B, 2 of C, matching the sample fixture shape.
+        self.sigs = (
+            [("a",)] * 8 + [("b",)] * 2 + [("c",)] * 2
+        )
