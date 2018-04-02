@@ -27,3 +27,10 @@ class TestDistribution(unittest.TestCase):
         self.sigs = (
             [("a",)] * 8 + [("b",)] * 2 + [("c",)] * 2
         )
+
+    def test_distinct_count(self):
+        dist = build_distribution(self.sigs)
+        self.assertEqual(dist.distinct, 3)
+
+    def test_total_runs(self):
+        dist = build_distribution(self.sigs)
