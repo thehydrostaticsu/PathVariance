@@ -34,3 +34,11 @@ class TestDistribution(unittest.TestCase):
 
     def test_total_runs(self):
         dist = build_distribution(self.sigs)
+        self.assertEqual(dist.total_runs, 12)
+
+    def test_modal_is_a(self):
+        dist = build_distribution(self.sigs)
+        self.assertEqual(dist.modal.signature, ("a",))
+        self.assertEqual(dist.modal.count, 8)
+        self.assertAlmostEqual(dist.modal.share, 8 / 12)
+
