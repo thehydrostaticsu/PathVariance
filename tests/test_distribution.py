@@ -42,3 +42,10 @@ class TestDistribution(unittest.TestCase):
         self.assertEqual(dist.modal.count, 8)
         self.assertAlmostEqual(dist.modal.share, 8 / 12)
 
+    def test_entropy_matches_hand_computation(self):
+        dist = build_distribution(self.sigs)
+        expected = -(
+            (8 / 12) * math.log2(8 / 12)
+            + 2 * (2 / 12) * math.log2(2 / 12)
+        )
+        self.assertAlmostEqual(dist.entropy_bits, expected)
