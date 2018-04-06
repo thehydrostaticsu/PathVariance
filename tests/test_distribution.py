@@ -49,3 +49,10 @@ class TestDistribution(unittest.TestCase):
             + 2 * (2 / 12) * math.log2(2 / 12)
         )
         self.assertAlmostEqual(dist.entropy_bits, expected)
+
+    def test_normalised_between_zero_and_one(self):
+        dist = build_distribution(self.sigs)
+        self.assertGreater(dist.normalised_entropy, 0.0)
+        self.assertLessEqual(dist.normalised_entropy, 1.0)
+
+    def test_single_path_normalised_zero(self):
