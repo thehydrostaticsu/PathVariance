@@ -10,3 +10,10 @@ class TestDivergence(unittest.TestCase):
         rep = analyse_divergence(sigs, modal)
         self.assertIsNone(rep.first_divergence_index)
         self.assertFalse(rep.diverges)
+
+    def test_divergence_at_index(self):
+        modal = ("a", "b", "c")
+        sigs = [modal, ("a", "b", "x"), ("a", "b", "c")]
+        rep = analyse_divergence(sigs, modal)
+        self.assertEqual(rep.first_divergence_index, 2)
+
