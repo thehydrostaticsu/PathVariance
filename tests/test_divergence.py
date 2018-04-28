@@ -24,3 +24,10 @@ class TestDivergence(unittest.TestCase):
         self.assertEqual(rep.first_divergence_index, 2)
 
     def test_longer_run_diverges_past_modal_end(self):
+        modal = ("a", "b")
+        sigs = [modal, ("a", "b", "c")]
+        rep = analyse_divergence(sigs, modal)
+        self.assertEqual(rep.first_divergence_index, 2)
+
+    def test_per_step_agreement_rates(self):
+        modal = ("a", "b", "c")
