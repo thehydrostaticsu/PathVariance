@@ -17,3 +17,10 @@ class TestDivergence(unittest.TestCase):
         rep = analyse_divergence(sigs, modal)
         self.assertEqual(rep.first_divergence_index, 2)
 
+    def test_shorter_run_diverges(self):
+        modal = ("a", "b", "c")
+        sigs = [modal, ("a", "b")]
+        rep = analyse_divergence(sigs, modal)
+        self.assertEqual(rep.first_divergence_index, 2)
+
+    def test_longer_run_diverges_past_modal_end(self):
