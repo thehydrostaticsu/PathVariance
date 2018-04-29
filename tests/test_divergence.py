@@ -31,3 +31,10 @@ class TestDivergence(unittest.TestCase):
 
     def test_per_step_agreement_rates(self):
         modal = ("a", "b", "c")
+        sigs = [modal, modal, ("a", "x", "c")]
+        rep = analyse_divergence(sigs, modal)
+        self.assertAlmostEqual(rep.per_step[0].rate, 1.0)
+        self.assertAlmostEqual(rep.per_step[1].rate, 2 / 3)
+        self.assertAlmostEqual(rep.per_step[2].rate, 1.0)
+
+    def test_ended_run_not_counted_in_rate(self):
