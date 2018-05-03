@@ -38,3 +38,10 @@ class TestDivergence(unittest.TestCase):
         self.assertAlmostEqual(rep.per_step[2].rate, 1.0)
 
     def test_ended_run_not_counted_in_rate(self):
+        modal = ("a", "b", "c")
+        sigs = [modal, ("a", "b")]
+        rep = analyse_divergence(sigs, modal)
+        # At index 2 only one run reached the step, and it agreed.
+        self.assertEqual(rep.per_step[2].considered, 1)
+        self.assertEqual(rep.per_step[2].agreeing, 1)
+
