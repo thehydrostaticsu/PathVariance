@@ -21,3 +21,11 @@ class TestParseExport(unittest.TestCase):
         self.assertEqual(export.task, "task")
 
     def test_task_override(self):
+        data = [{"steps": [{"tool": "a"}]}]
+        export = parse_export(data, task="custom")
+        self.assertEqual(export.task, "custom")
+
+    def test_arguments_alias_accepted(self):
+        data = {
+            "task": "t",
+            "runs": [{"steps": [{"tool": "a", "arguments": {"k": 1}}]}],
