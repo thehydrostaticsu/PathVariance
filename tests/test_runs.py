@@ -13,3 +13,11 @@ class TestParseExport(unittest.TestCase):
         export = parse_export(data)
         self.assertEqual(export.task, "t")
         self.assertEqual(len(export), 1)
+        self.assertEqual(export.runs[0].tools(), ("a",))
+
+    def test_bare_list_needs_default_task(self):
+        data = [{"run_id": "r1", "steps": [{"tool": "a"}]}]
+        export = parse_export(data)
+        self.assertEqual(export.task, "task")
+
+    def test_task_override(self):
