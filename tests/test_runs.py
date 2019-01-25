@@ -29,3 +29,11 @@ class TestParseExport(unittest.TestCase):
         data = {
             "task": "t",
             "runs": [{"steps": [{"tool": "a", "arguments": {"k": 1}}]}],
+        }
+        export = parse_export(data)
+        self.assertEqual(export.runs[0].steps[0].args, {"k": 1})
+
+    def test_missing_tool_raises(self):
+        data = {"task": "t", "runs": [{"steps": [{"args": {}}]}]}
+        with self.assertRaises(ParseError):
+            parse_export(data)
