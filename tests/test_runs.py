@@ -37,3 +37,11 @@ class TestParseExport(unittest.TestCase):
         data = {"task": "t", "runs": [{"steps": [{"args": {}}]}]}
         with self.assertRaises(ParseError):
             parse_export(data)
+
+    def test_non_dict_args_raises(self):
+        data = {"task": "t", "runs": [{"steps": [{"tool": "a", "args": 3}]}]}
+        with self.assertRaises(ParseError):
+            parse_export(data)
+
+    def test_missing_task_raises(self):
+        with self.assertRaises(ParseError):
