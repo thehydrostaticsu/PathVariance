@@ -45,3 +45,11 @@ class TestParseExport(unittest.TestCase):
 
     def test_missing_task_raises(self):
         with self.assertRaises(ParseError):
+            parse_export({"runs": [{"steps": [{"tool": "a"}]}]})
+
+    def test_empty_runs_raises(self):
+        with self.assertRaises(ParseError):
+            parse_export({"task": "t", "runs": []})
+
+    def test_generated_run_id(self):
+        data = {"task": "t", "runs": [{"steps": [{"tool": "a"}]}]}
