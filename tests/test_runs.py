@@ -53,3 +53,10 @@ class TestParseExport(unittest.TestCase):
 
     def test_generated_run_id(self):
         data = {"task": "t", "runs": [{"steps": [{"tool": "a"}]}]}
+        export = parse_export(data)
+        self.assertEqual(export.runs[0].run_id, "run000")
+
+    def test_arg_signature_stable(self):
+        s1 = Step(tool="a", args={"b": 1, "a": 2})
+        s2 = Step(tool="a", args={"a": 2, "b": 1})
+        self.assertEqual(s1.arg_signature(), s2.arg_signature())
