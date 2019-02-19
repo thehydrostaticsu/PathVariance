@@ -18,3 +18,8 @@ class TestStability(unittest.TestCase):
         self.assertIn("below the minimum", result.reason)
 
     def test_stable_above_threshold(self):
+        result = assess(_dist(10), min_runs=5, threshold=0.90)
+        self.assertIs(result.verdict, Verdict.STABLE)
+        self.assertEqual(result.exit_code, 0)
+
+    def test_unstable_below_threshold(self):
