@@ -23,3 +23,8 @@ class TestStability(unittest.TestCase):
         self.assertEqual(result.exit_code, 0)
 
     def test_unstable_below_threshold(self):
+        result = assess(_dist(8, 2, 2), min_runs=5, threshold=0.90)
+        self.assertIs(result.verdict, Verdict.UNSTABLE)
+        self.assertEqual(result.exit_code, 1)
+
+    def test_exactly_at_threshold_is_stable(self):
