@@ -28,3 +28,9 @@ class TestStability(unittest.TestCase):
         self.assertEqual(result.exit_code, 1)
 
     def test_exactly_at_threshold_is_stable(self):
+        # 9 of 10 is 0.9, at the threshold, which counts as stable.
+        result = assess(_dist(9, 1), min_runs=5, threshold=0.90)
+        self.assertIs(result.verdict, Verdict.STABLE)
+
+    def test_under_min_exit_code_is_one(self):
+        result = assess(_dist(3), min_runs=5)
