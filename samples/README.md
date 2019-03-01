@@ -9,3 +9,10 @@ is presented here as a fixture, never as production telemetry.
 
 One task, `fix-null-deref-in-parser`, run 12 times. Each run is a sequence of
 tool calls. The task is to locate a null dereference in a config parser, fix
+it, and prove the fix with the existing test. Every run reaches a passing
+outcome, so outcome-only evaluation would call this task fully stable. The
+point of the fixture is that the path was not stable at all.
+
+## How it was constructed
+
+The 12 runs were written by hand to produce a specific, checkable shape:
