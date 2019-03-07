@@ -16,3 +16,9 @@ point of the fixture is that the path was not stable at all.
 ## How it was constructed
 
 The 12 runs were written by hand to produce a specific, checkable shape:
+
+| Lane | Runs | Path | Diverges at |
+|---|---|---|---|
+| A (modal) | 8 | grep, read, edit, test, done | is the modal path |
+| B | 2 | grep, read, read, edit, test, done | step index 2 |
+| C | 2 | grep, read, test, edit, test, done | step index 2 |
