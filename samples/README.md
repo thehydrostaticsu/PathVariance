@@ -22,3 +22,10 @@ The 12 runs were written by hand to produce a specific, checkable shape:
 | A (modal) | 8 | grep, read, edit, test, done | is the modal path |
 | B | 2 | grep, read, read, edit, test, done | step index 2 |
 | C | 2 | grep, read, test, edit, test, done | step index 2 |
+
+All three lanes agree on step 0 (grep) and step 1 (read), then split at step
+index 2. Lane B reads a second file before editing. Lane C runs the test first,
+watches it fail, then edits and re-tests. The `ok` flag on lane C's first test
+step is `false` to reflect that the test was expected to fail at that point.
+
+This gives a modal share of 8 of 12, which is 66.7 percent, deliberately below
