@@ -35,3 +35,10 @@ and the instability is visible.
 ## Why these exact numbers
 
 The shape was chosen so the derived statistics are worth checking by hand:
+
+- distinct paths: 3
+- modal share: 8 / 12 = 66.7 percent
+- Shannon entropy: with probabilities 8/12, 2/12, 2/12 the entropy is
+  1.252 bits
+- normalised entropy: 1.252 / log2(3) = 0.790
+- first divergence index: 2
