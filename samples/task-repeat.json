@@ -1,0 +1,9 @@
+{
+  "task": "fix-null-deref-in-parser",
+  "description": "Locate and fix a null dereference in the config parser, then prove the fix with the existing test.",
+  "runs": [
+    {"run_id": "r01", "outcome": true, "steps": [
+      {"tool": "grep", "args": {"pattern": "parse_config"}, "ok": true},
+      {"tool": "read", "args": {"path": "src/config.py"}, "ok": true},
+      {"tool": "edit", "args": {"path": "src/config.py"}, "ok": true},
+      {"tool": "test", "args": {"target": "tests/test_config.py"}, "ok": true},
