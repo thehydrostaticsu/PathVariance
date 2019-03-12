@@ -29,3 +29,9 @@ watches it fail, then edits and re-tests. The `ok` flag on lane C's first test
 step is `false` to reflect that the test was expected to fail at that point.
 
 This gives a modal share of 8 of 12, which is 66.7 percent, deliberately below
+the default 90 percent stability threshold so the `report` subcommand exits 1
+and the instability is visible.
+
+## Why these exact numbers
+
+The shape was chosen so the derived statistics are worth checking by hand:
