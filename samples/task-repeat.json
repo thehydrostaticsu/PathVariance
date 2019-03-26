@@ -38,3 +38,10 @@
       {"tool": "done", "args": {}, "ok": true}
     ]},
     {"run_id": "r06", "outcome": true, "steps": [
+      {"tool": "grep", "args": {"pattern": "parse_config"}, "ok": true},
+      {"tool": "read", "args": {"path": "src/config.py"}, "ok": true},
+      {"tool": "edit", "args": {"path": "src/config.py"}, "ok": true},
+      {"tool": "test", "args": {"target": "tests/test_config.py"}, "ok": true},
+      {"tool": "done", "args": {}, "ok": true}
+    ]},
+    {"run_id": "r07", "outcome": true, "steps": [
