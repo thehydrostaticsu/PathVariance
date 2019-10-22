@@ -128,4 +128,4 @@ tool descriptions, or nothing at all.
 
 MIT. See `LICENSE`.
 
-<!-- draft note 340 -->
+<!-- draft note 341 -->
