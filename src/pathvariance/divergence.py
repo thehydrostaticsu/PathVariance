@@ -81,3 +81,21 @@ def analyse_divergence(
             elif first_divergence is None:
                 first_divergence = index
         per_step.append(
+            StepAgreement(
+                index=index,
+                modal_token=modal_token,
+                agreeing=agreeing,
+                considered=considered,
+            )
+        )
+    # Runs longer than the modal path also diverge, at the first index past the
+    # modal path's end.
+    for sig in signatures:
+        if len(sig) > len(modal) and (
+            first_divergence is None or first_divergence > len(modal)
+        ):
+            first_divergence = len(modal)
+    return DivergenceReport(
+        modal_signature=modal,
+        first_divergence_index=first_divergence,
+        per_step=tuple(per_step),
