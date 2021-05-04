@@ -6,3 +6,8 @@
   (the modal path) emphasised, two diverging. This is what the tool measures.
 
   Palette, two cores plus one accent, derived from the subject:
+    ink   #1b2a33  steady text, contrast 14.7:1 on white
+    teal  #0f6b6b  the modal path that most runs share, 6.3:1 on white
+    amber #b5651d  the accent, a divergence, 4.34:1 on white so used only at
+                   18px and above where WCAG asks 3:1
+  Neutrals: white background, grey #5a6b73 for the diverging lanes, 5.55:1.
