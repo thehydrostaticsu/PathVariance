@@ -11,3 +11,7 @@
     amber #b5651d  the accent, a divergence, 4.34:1 on white so used only at
                    18px and above where WCAG asks 3:1
   Neutrals: white background, grey #5a6b73 for the diverging lanes, 5.55:1.
+  One stroke width per role: lanes 3, origin ring 2. One corner radius: none
+  needed, geometry is circles and straight lanes on a 4 unit grid.
+  Coordinates sit on a 4 unit grid within a 240 x 96 viewBox.
+-->
