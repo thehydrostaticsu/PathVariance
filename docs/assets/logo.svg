@@ -20,3 +20,7 @@
   <desc id="logoDesc">Three runs leave one origin node; one modal lane in teal stays straight while two grey lanes diverge, beside the wordmark path in ink and variance in teal.</desc>
   <rect x="0" y="0" width="240" height="96" fill="#ffffff"/>
 
+  <!-- Mark: origin node with three lanes. Origin at (28,48) on the grid. -->
+  <g fill="none">
+    <!-- Diverging lane up, grey -->
+    <path d="M28 48 L52 48 L72 28" stroke="#5a6b73" stroke-width="3"/>
