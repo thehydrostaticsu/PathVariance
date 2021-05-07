@@ -29,3 +29,7 @@
     <!-- Modal lane straight through, teal, emphasised -->
     <path d="M28 48 L76 48" stroke="#0f6b6b" stroke-width="3"/>
   </g>
+  <!-- Lane endpoints: modal filled teal, diverging hollow grey -->
+  <circle cx="76" cy="48" r="4" fill="#0f6b6b"/>
+  <circle cx="72" cy="28" r="3.5" fill="#ffffff" stroke="#5a6b73" stroke-width="2"/>
+  <circle cx="72" cy="68" r="3.5" fill="#ffffff" stroke="#5a6b73" stroke-width="2"/>
