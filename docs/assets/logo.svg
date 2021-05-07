@@ -24,3 +24,8 @@
   <g fill="none">
     <!-- Diverging lane up, grey -->
     <path d="M28 48 L52 48 L72 28" stroke="#5a6b73" stroke-width="3"/>
+    <!-- Diverging lane down, grey -->
+    <path d="M28 48 L52 48 L72 68" stroke="#5a6b73" stroke-width="3"/>
+    <!-- Modal lane straight through, teal, emphasised -->
+    <path d="M28 48 L76 48" stroke="#0f6b6b" stroke-width="3"/>
+  </g>
