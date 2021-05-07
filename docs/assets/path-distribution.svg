@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  pathvariance path distribution, small multiples. One compact lane per
+  distinct path, all sharing one step index axis across the top, so the reader
+  can see exactly where the lanes stop agreeing. The modal path (lane A) is
+  emphasised with a filled teal track; the two minority lanes are grey. A short
+  amber callout marks the first divergence, step index 2.
+
+  Every number here comes from a real run of this project against
