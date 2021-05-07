@@ -15,3 +15,8 @@
   needed, geometry is circles and straight lanes on a 4 unit grid.
   Coordinates sit on a 4 unit grid within a 240 x 96 viewBox.
 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 96" width="240" height="96" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">pathvariance</title>
+  <desc id="logoDesc">Three runs leave one origin node; one modal lane in teal stays straight while two grey lanes diverge, beside the wordmark path in ink and variance in teal.</desc>
+  <rect x="0" y="0" width="240" height="96" fill="#ffffff"/>
+
