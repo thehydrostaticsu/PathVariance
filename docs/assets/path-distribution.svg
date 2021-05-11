@@ -18,3 +18,9 @@
     teal  #0f6b6b  the modal path most runs share, 5.6:1 on the panel fill
     amber #b5651d  the accent, the first divergence, one place only, 18px+
   Neutrals: page #ffffff, panel #f4f1ec, grid rule #d7d0c4, minority #5a6b73.
+  Stroke roles, one width each: lane track 10 (via rect height), axis rule 1,
+  callout leader 1.5. One corner radius: 3, reused on every cell and chip.
+  All edges on an 8 unit grid. Cells step by 104 on x from x=176.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440" role="img" aria-labelledby="distTitle distDesc">
+  <title id="distTitle">Path distribution across 12 repeated runs of one task</title>
