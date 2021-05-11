@@ -7,3 +7,9 @@
   amber callout marks the first divergence, step index 2.
 
   Every number here comes from a real run of this project against
+  samples/task-repeat.json:
+    runs 12, distinct paths 3, modal share 66.7 percent (8 of 12),
+    lane B 2 of 12, lane C 2 of 12, Shannon entropy 1.252 bits,
+    normalised entropy 0.790, first divergence index 2.
+  Captured with: PYTHONPATH=src python -m pathvariance report samples/task-repeat.json
+
