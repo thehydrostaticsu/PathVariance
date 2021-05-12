@@ -30,3 +30,9 @@
 
   <!-- Title block -->
   <text x="32" y="44" font-family="-apple-system, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1b2a33">Path distribution, 12 runs</text>
+  <text x="32" y="68" font-family="-apple-system, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#5a6b73">task: fix-null-deref-in-parser</text>
+
+  <!-- Summary chips, right aligned group. Each on its own baseline pair. -->
+  <text x="688" y="40" text-anchor="end" font-family="&quot;Cascadia Mono&quot;, &quot;JetBrains Mono&quot;, Consolas, &quot;DejaVu Sans Mono&quot;, monospace" font-size="13" fill="#5a6b73">distinct paths</text>
+  <text x="688" y="60" text-anchor="end" font-family="&quot;Cascadia Mono&quot;, &quot;JetBrains Mono&quot;, Consolas, &quot;DejaVu Sans Mono&quot;, monospace" font-size="22" font-weight="700" fill="#1b2a33">3</text>
+  <text x="560" y="40" text-anchor="end" font-family="&quot;Cascadia Mono&quot;, &quot;JetBrains Mono&quot;, Consolas, &quot;DejaVu Sans Mono&quot;, monospace" font-size="13" fill="#5a6b73">entropy (bits)</text>
