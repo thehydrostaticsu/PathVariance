@@ -36,3 +36,9 @@
   <text x="688" y="40" text-anchor="end" font-family="&quot;Cascadia Mono&quot;, &quot;JetBrains Mono&quot;, Consolas, &quot;DejaVu Sans Mono&quot;, monospace" font-size="13" fill="#5a6b73">distinct paths</text>
   <text x="688" y="60" text-anchor="end" font-family="&quot;Cascadia Mono&quot;, &quot;JetBrains Mono&quot;, Consolas, &quot;DejaVu Sans Mono&quot;, monospace" font-size="22" font-weight="700" fill="#1b2a33">3</text>
   <text x="560" y="40" text-anchor="end" font-family="&quot;Cascadia Mono&quot;, &quot;JetBrains Mono&quot;, Consolas, &quot;DejaVu Sans Mono&quot;, monospace" font-size="13" fill="#5a6b73">entropy (bits)</text>
+  <text x="560" y="60" text-anchor="end" font-family="&quot;Cascadia Mono&quot;, &quot;JetBrains Mono&quot;, Consolas, &quot;DejaVu Sans Mono&quot;, monospace" font-size="22" font-weight="700" fill="#1b2a33">1.252</text>
+
+  <!-- Panel behind the lanes -->
+  <rect x="32" y="96" width="656" height="296" rx="3" fill="#f4f1ec"/>
+
+  <!-- Step index axis across the top of the panel. Six steps, index 0..5. -->
