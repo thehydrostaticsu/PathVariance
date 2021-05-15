@@ -42,3 +42,8 @@
   <rect x="32" y="96" width="656" height="296" rx="3" fill="#f4f1ec"/>
 
   <!-- Step index axis across the top of the panel. Six steps, index 0..5. -->
+  <!-- x positions: 176, 280, 384, 488, 592 ... origin label column at 96. -->
+  <text x="96" y="124" text-anchor="middle" font-family="&quot;Cascadia Mono&quot;, &quot;JetBrains Mono&quot;, Consolas, &quot;DejaVu Sans Mono&quot;, monospace" font-size="12" fill="#5a6b73">path</text>
+  <text x="176" y="124" text-anchor="middle" font-family="&quot;Cascadia Mono&quot;, &quot;JetBrains Mono&quot;, Consolas, &quot;DejaVu Sans Mono&quot;, monospace" font-size="12" fill="#5a6b73">step 0</text>
+  <text x="280" y="124" text-anchor="middle" font-family="&quot;Cascadia Mono&quot;, &quot;JetBrains Mono&quot;, Consolas, &quot;DejaVu Sans Mono&quot;, monospace" font-size="12" fill="#5a6b73">step 1</text>
+  <text x="384" y="124" text-anchor="middle" font-family="&quot;Cascadia Mono&quot;, &quot;JetBrains Mono&quot;, Consolas, &quot;DejaVu Sans Mono&quot;, monospace" font-size="12" fill="#5a6b73">step 2</text>
