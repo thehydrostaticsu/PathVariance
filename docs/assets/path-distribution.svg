@@ -47,3 +47,9 @@
   <text x="176" y="124" text-anchor="middle" font-family="&quot;Cascadia Mono&quot;, &quot;JetBrains Mono&quot;, Consolas, &quot;DejaVu Sans Mono&quot;, monospace" font-size="12" fill="#5a6b73">step 0</text>
   <text x="280" y="124" text-anchor="middle" font-family="&quot;Cascadia Mono&quot;, &quot;JetBrains Mono&quot;, Consolas, &quot;DejaVu Sans Mono&quot;, monospace" font-size="12" fill="#5a6b73">step 1</text>
   <text x="384" y="124" text-anchor="middle" font-family="&quot;Cascadia Mono&quot;, &quot;JetBrains Mono&quot;, Consolas, &quot;DejaVu Sans Mono&quot;, monospace" font-size="12" fill="#5a6b73">step 2</text>
+  <text x="488" y="124" text-anchor="middle" font-family="&quot;Cascadia Mono&quot;, &quot;JetBrains Mono&quot;, Consolas, &quot;DejaVu Sans Mono&quot;, monospace" font-size="12" fill="#5a6b73">step 3</text>
+  <text x="592" y="124" text-anchor="middle" font-family="&quot;Cascadia Mono&quot;, &quot;JetBrains Mono&quot;, Consolas, &quot;DejaVu Sans Mono&quot;, monospace" font-size="12" fill="#5a6b73">step 4</text>
+
+  <!-- Divergence marker: a vertical amber rule between step 1 and step 2. -->
+  <line x1="332" y1="136" x2="332" y2="360" stroke="#b5651d" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="332" y="380" text-anchor="middle" font-family="-apple-system, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#b5651d">first divergence, step 2</text>
