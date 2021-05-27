@@ -65,3 +65,9 @@
     <rect x="568" y="164" width="48" height="24" rx="3" fill="#0f6b6b"/><text x="592" y="181">done</text>
   </g>
 
+  <!-- Lane B, 2 of 12. Row baseline centre y=248. Extra read at step 2. -->
+  <text x="96" y="253" text-anchor="middle" font-family="&quot;Cascadia Mono&quot;, &quot;JetBrains Mono&quot;, Consolas, &quot;DejaVu Sans Mono&quot;, monospace" font-size="13" font-weight="700" fill="#5a6b73">B 2/12</text>
+  <line x1="152" y1="248" x2="616" y2="248" stroke="#5a6b73" stroke-width="2"/>
+  <g font-family="-apple-system, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#1b2a33" text-anchor="middle">
+    <rect x="152" y="236" width="48" height="24" rx="3" fill="#e7e1d6" stroke="#d7d0c4" stroke-width="1"/><text x="176" y="253">grep</text>
+    <rect x="256" y="236" width="48" height="24" rx="3" fill="#e7e1d6" stroke="#d7d0c4" stroke-width="1"/><text x="280" y="253">read</text>
