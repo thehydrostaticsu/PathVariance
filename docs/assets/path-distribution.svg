@@ -59,3 +59,9 @@
   <line x1="152" y1="176" x2="616" y2="176" stroke="#0f6b6b" stroke-width="2"/>
   <g font-family="-apple-system, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">
     <rect x="152" y="164" width="48" height="24" rx="3" fill="#0f6b6b"/><text x="176" y="181">grep</text>
+    <rect x="256" y="164" width="48" height="24" rx="3" fill="#0f6b6b"/><text x="280" y="181">read</text>
+    <rect x="360" y="164" width="48" height="24" rx="3" fill="#0f6b6b"/><text x="384" y="181">edit</text>
+    <rect x="464" y="164" width="48" height="24" rx="3" fill="#0f6b6b"/><text x="488" y="181">test</text>
+    <rect x="568" y="164" width="48" height="24" rx="3" fill="#0f6b6b"/><text x="592" y="181">done</text>
+  </g>
+
