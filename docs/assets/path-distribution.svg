@@ -71,3 +71,8 @@
   <g font-family="-apple-system, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#1b2a33" text-anchor="middle">
     <rect x="152" y="236" width="48" height="24" rx="3" fill="#e7e1d6" stroke="#d7d0c4" stroke-width="1"/><text x="176" y="253">grep</text>
     <rect x="256" y="236" width="48" height="24" rx="3" fill="#e7e1d6" stroke="#d7d0c4" stroke-width="1"/><text x="280" y="253">read</text>
+    <rect x="360" y="236" width="48" height="24" rx="3" fill="#dcd4c6" stroke="#5a6b73" stroke-width="1"/><text x="384" y="253">read</text>
+    <rect x="464" y="236" width="48" height="24" rx="3" fill="#e7e1d6" stroke="#d7d0c4" stroke-width="1"/><text x="488" y="253">edit</text>
+    <rect x="568" y="236" width="48" height="24" rx="3" fill="#e7e1d6" stroke="#d7d0c4" stroke-width="1"/><text x="592" y="253">test</text>
+  </g>
+
