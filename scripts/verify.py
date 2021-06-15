@@ -44,3 +44,21 @@ SKIP_DIRS = {
 BANNED_FILTERS = ("feGaussianBlur", "feDropShadow", "feTurbulence")
 
 BANNED_MARKETING = [
+    "blazing", "blazingly", "cutting-edge", "cutting edge", "state-of-the-art",
+    "state of the art", "world-class", "world class", "revolutionary",
+    "game-changing", "game changing", "seamless", "seamlessly", "effortless",
+    "effortlessly", "lightning-fast", "lightning fast", "supercharge",
+    "supercharged", "next-generation", "next generation", "best-in-class",
+    "unparalleled", "unrivaled", "unrivalled", "turnkey", "synergy",
+    "leverage the power", "one-stop", "ai powered", "ai-powered",
+    "enterprise-grade", "production ready", "battle tested", "robust and",
+]
+
+# Built from parts so this file does not match its own em dash sweep.
+EM_DASH_FORMS = (
+    "\u2014",
+    "&#" + "8212;",
+    "&" + "mdash;",
+)
+
+WIDTH_SANS = 0.58
