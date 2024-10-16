@@ -126,3 +126,6 @@ tool descriptions, or nothing at all.
 
 ## License
 
+MIT. See `LICENSE`.
+
+<!-- draft note 1066 -->
