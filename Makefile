@@ -19,3 +19,7 @@ verify:  ## Run the quality gate
 	$(PYTHON) scripts/verify.py
 
 run:  ## Run the report against the sample export
+	$(PYTHON) -m PathVariance report samples/task-repeat.json
+
+clean:  ## Remove caches and build artifacts
+	$(PYTHON) -c "import shutil,glob,os; [shutil.rmtree(p,ignore_errors=True) for p in glob.glob('**/__pycache__',recursive=True)+glob.glob('**/*.egg-info',recursive=True)+['build','dist','.pytest_cache']]"
