@@ -60,3 +60,20 @@ class TestParseExport(unittest.TestCase):
         s1 = Step(tool="a", args={"b": 1, "a": 2})
         s2 = Step(tool="a", args={"a": 2, "b": 1})
         self.assertEqual(s1.arg_signature(), s2.arg_signature())
+
+    def test_bad_json_via_string(self):
+        from pathvariance.runs import load_export
+
+        with self.assertRaises(ParseError):
+            load_export("{not json")
+
+    def test_outcome_type_checked(self):
+        data = {"task": "t", "runs": [{"outcome": "yes", "steps": [{"tool": "a"}]}]}
+        with self.assertRaises(ParseError):
+            parse_export(data)
+
+
+if __name__ == "__main__":
+    unittest.main()
+
+# draft note 1383
