@@ -79,3 +79,20 @@ def assess(
             f"modal path took {share:.1%} of {total} runs, at or above the "
             f"{threshold:.0%} threshold"
         )
+    else:
+        verdict = Verdict.UNSTABLE
+        reason = (
+            f"modal path took only {share:.1%} of {total} runs, below the "
+            f"{threshold:.0%} threshold; {distribution.distinct} distinct "
+            "paths were observed"
+        )
+    return StabilityResult(
+        verdict=verdict,
+        total_runs=total,
+        min_runs=min_runs,
+        threshold=threshold,
+        modal_share=share,
+        reason=reason,
+    )
+
+# draft note 1385
