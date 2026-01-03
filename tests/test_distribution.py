@@ -56,3 +56,19 @@ class TestDistribution(unittest.TestCase):
         self.assertLessEqual(dist.normalised_entropy, 1.0)
 
     def test_single_path_normalised_zero(self):
+        dist = build_distribution([("a",)] * 6)
+        self.assertEqual(dist.normalised_entropy, 0.0)
+        self.assertEqual(dist.entropy_bits, 0.0)
+
+    def test_tie_broken_by_label(self):
+        # Two paths with equal counts: first appearance gets label A and sorts
+        # ahead of B.
+        dist = build_distribution([("x",), ("y",), ("x",), ("y",)])
+        self.assertEqual(dist.paths[0].label, "A")
+        self.assertEqual(dist.paths[1].label, "B")
+
+
+if __name__ == "__main__":
+    unittest.main()
+
+# draft note 1388
