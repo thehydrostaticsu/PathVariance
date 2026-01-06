@@ -34,3 +34,14 @@ class TestStability(unittest.TestCase):
 
     def test_under_min_exit_code_is_one(self):
         result = assess(_dist(3), min_runs=5)
+        self.assertEqual(result.exit_code, 1)
+
+    def test_gate_configurable(self):
+        result = assess(_dist(3), min_runs=3, threshold=0.90)
+        self.assertIs(result.verdict, Verdict.STABLE)
+
+
+if __name__ == "__main__":
+    unittest.main()
+
+# draft note 1390
