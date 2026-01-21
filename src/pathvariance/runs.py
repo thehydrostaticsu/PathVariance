@@ -141,3 +141,25 @@ def parse_export(data: Any, task: str | None = None) -> Export:
         label = task or "task"
         runs_raw = data
     else:
+        raise ParseError(
+            "export must be an object with 'runs' or a bare list of runs"
+        )
+    if not isinstance(runs_raw, list) or not runs_raw:
+        raise ParseError("export has no runs")
+    runs = tuple(_coerce_run(run, i) for i, run in enumerate(runs_raw))
+    return Export(task=label, runs=runs)
+
+
+def load_export(source: str | Path, task: str | None = None) -> Export:
+    """Load and parse an export from a file path or a JSON string."""
+    text: str
+    path = Path(source)
+    if path.exists():
+        text = path.read_text(encoding="utf-8")
+    else:
+        text = str(source)
+    try:
+        data = json.loads(text)
+    except json.JSONDecodeError as exc:
+        raise ParseError(f"export is not valid JSON: {exc}") from exc
+    return parse_export(data, task=task)
