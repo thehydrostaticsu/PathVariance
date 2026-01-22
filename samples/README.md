@@ -42,3 +42,14 @@ The shape was chosen so the derived statistics are worth checking by hand:
   1.252 bits
 - normalised entropy: 1.252 / log2(3) = 0.790
 - first divergence index: 2
+
+Every one of these appears in the assets and the README, and every one is
+reproduced by running the CLI against this file. If you change the fixture, the
+tests in `tests/test_divergence.py` and `tests/test_distribution.py` that pin
+these numbers will fail, which is intended.
+
+## Regenerating the documented output
+
+```
+PYTHONPATH=src python -m pathvariance report samples/task-repeat.json
+```
