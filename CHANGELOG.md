@@ -72,3 +72,18 @@ Keep a Changelog, and the project uses semantic versioning.
 
 ### Added
 
+- The minimum run count gate: no entropy or verdict below it.
+
+## [0.2.0] - 2016-08-16
+
+### Added
+
+- Path distribution: distinct paths, modal share, Shannon entropy.
+
+## [0.1.0] - 2015-04-07
+
+### Added
+
+- Initial repeated run export parser and path signatures.
+
+<!-- draft note 1395 -->
