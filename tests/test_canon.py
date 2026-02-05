@@ -53,3 +53,17 @@ class TestCanon(unittest.TestCase):
     def test_labels_by_first_appearance(self):
         sigs = [("a",), ("b",), ("a",), ("c",)]
         labels = label_paths(sigs)
+        self.assertEqual(labels[("a",)], "A")
+        self.assertEqual(labels[("b",)], "B")
+        self.assertEqual(labels[("c",)], "C")
+
+    def test_label_wraps_past_z(self):
+        sigs = [(str(i),) for i in range(28)]
+        labels = label_paths(sigs)
+        self.assertEqual(labels[("25",)], "Z")
+        self.assertEqual(labels[("26",)], "AA")
+        self.assertEqual(labels[("27",)], "AB")
+
+
+if __name__ == "__main__":
+    unittest.main()
