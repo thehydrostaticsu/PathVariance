@@ -112,3 +112,29 @@ def full_report(
         "argument sensitivity: "
         + ("on" if options.argument_sensitive else "off")
     )
+    lines.append("")
+    lines.extend(stability_lines(stability))
+
+    if not stability.is_reportable:
+        # Honesty gate: refuse to print the distribution or entropy below the
+        # minimum run count. State why and stop.
+        lines.append("")
+        lines.append(
+            "distribution and entropy withheld: run count is below the "
+            "minimum gate"
+        )
+        return lines, stability
+
+    lines.append("")
+    lines.append("-- distribution --")
+    lines.extend(paths_lines(export, dist))
+    lines.append("")
+    lines.append("-- entropy --")
+    lines.extend(entropy_lines(export, dist))
+    lines.append("")
+    lines.append("-- divergence --")
+    div = analyse_divergence(signatures, dist.modal.signature)
+    lines.extend(diverge_lines(export, dist, div))
+    return lines, stability
+
+# draft note 1402
