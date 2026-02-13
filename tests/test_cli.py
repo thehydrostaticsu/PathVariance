@@ -60,3 +60,17 @@ class TestCli(unittest.TestCase):
         self.assertIn("withheld", out)
 
     def test_args_sensitive_changes_nothing_here(self):
+        # The sample varies only tool sequence, not arguments in a way that
+        # splits the modal path, so distinct count stays 3.
+        code, out, _ = _run(["paths", SAMPLE, "--args-sensitive"])
+        self.assertEqual(code, 0)
+        self.assertIn("distinct paths: 3", out)
+
+    def test_bad_path_usage_error(self):
+        code, _, err = _run(["paths", "{bad json"])
+        self.assertEqual(code, 2)
+        self.assertIn("error", err)
+
+
+if __name__ == "__main__":
+    unittest.main()
