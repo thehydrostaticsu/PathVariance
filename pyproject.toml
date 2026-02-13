@@ -20,3 +20,9 @@ package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/thehydrostaticsu/PathVariance"
+Source = "https://github.com/thehydrostaticsu/PathVariance"
+
+<!-- draft note 1403 -->
