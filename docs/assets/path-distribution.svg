@@ -76,3 +76,19 @@
     <rect x="568" y="236" width="48" height="24" rx="3" fill="#e7e1d6" stroke="#d7d0c4" stroke-width="1"/><text x="592" y="253">test</text>
   </g>
 
+  <!-- Lane C, 2 of 12. Row baseline centre y=320. Early test at step 2. -->
+  <text x="96" y="325" text-anchor="middle" font-family="&quot;Cascadia Mono&quot;, &quot;JetBrains Mono&quot;, Consolas, &quot;DejaVu Sans Mono&quot;, monospace" font-size="13" font-weight="700" fill="#5a6b73">C 2/12</text>
+  <line x1="152" y1="320" x2="616" y2="320" stroke="#5a6b73" stroke-width="2"/>
+  <g font-family="-apple-system, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#1b2a33" text-anchor="middle">
+    <rect x="152" y="308" width="48" height="24" rx="3" fill="#e7e1d6" stroke="#d7d0c4" stroke-width="1"/><text x="176" y="325">grep</text>
+    <rect x="256" y="308" width="48" height="24" rx="3" fill="#e7e1d6" stroke="#d7d0c4" stroke-width="1"/><text x="280" y="325">read</text>
+    <rect x="360" y="308" width="48" height="24" rx="3" fill="#dcd4c6" stroke="#5a6b73" stroke-width="1"/><text x="384" y="325">test</text>
+    <rect x="464" y="308" width="48" height="24" rx="3" fill="#e7e1d6" stroke="#d7d0c4" stroke-width="1"/><text x="488" y="325">edit</text>
+    <rect x="568" y="308" width="48" height="24" rx="3" fill="#e7e1d6" stroke="#d7d0c4" stroke-width="1"/><text x="592" y="325">test</text>
+  </g>
+
+  <!-- Footer note, single baseline. -->
+  <text x="32" y="424" font-family="-apple-system, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#5a6b73">Lanes agree through step 1, then split three ways. Modal share 66.7 percent, normalised entropy 0.790.</text>
+</svg>
+
+<!-- draft note 1406 -->
