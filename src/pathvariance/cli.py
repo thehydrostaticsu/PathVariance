@@ -143,3 +143,34 @@ def main(argv: list[str] | None = None) -> int:
         signatures = signatures_for(export, options)
         dist = build_distribution(signatures)
         stability = assess(
+            dist, min_runs=args.min_runs, threshold=args.threshold
+        )
+        if not stability.is_reportable:
+            # Honesty gate: refuse to report entropy below the minimum.
+            sys.stderr.write(f"refused: {stability.reason}\n")
+            return 1
+        _emit(entropy_lines(export, dist))
+        return 0
+
+    if args.command == "diverge":
+        signatures = signatures_for(export, options)
+        dist = build_distribution(signatures)
+        div = analyse_divergence(signatures, dist.modal.signature)
+        _emit(diverge_lines(export, dist, div))
+        return 0
+
+    if args.command == "report":
+        lines, stability = full_report(
+            export, options, args.min_runs, args.threshold
+        )
+        _emit(lines)
+        return stability.exit_code
+
+    parser.error(f"unknown command {args.command!r}")
+    return USAGE_ERROR
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+
+# draft note 1405
