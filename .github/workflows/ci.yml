@@ -21,4 +21,4 @@ jobs:
           PYTHONPATH: src
         run: python -m pathvariance version
 
-# draft note 1416
+# draft note 1419
