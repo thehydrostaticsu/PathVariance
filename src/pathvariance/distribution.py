@@ -83,3 +83,19 @@ def build_distribution(signatures: list[tuple[str, ...]]) -> Distribution:
     stats = tuple(
         PathStat(
             label=labels[sig],
+            sig_id=signature_id(sig),
+            signature=sig,
+            count=count,
+            share=count / total if total else 0.0,
+        )
+        for sig, count in ordered
+    )
+    entropy = shannon_entropy_bits([count for _, count in ordered])
+    k = len(stats)
+    normalised = entropy / math.log2(k) if k > 1 else 0.0
+    return Distribution(
+        total_runs=total,
+        paths=stats,
+        entropy_bits=entropy,
+        normalised_entropy=normalised,
+    )
