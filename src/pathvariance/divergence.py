@@ -100,5 +100,3 @@ def analyse_divergence(
         first_divergence_index=first_divergence,
         per_step=tuple(per_step),
     )
-
-# draft note 1397
