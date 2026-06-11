@@ -94,5 +94,3 @@ def assess(
         modal_share=share,
         reason=reason,
     )
-
-# draft note 1415
