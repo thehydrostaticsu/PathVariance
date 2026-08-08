@@ -136,5 +136,3 @@ def full_report(
     div = analyse_divergence(signatures, dist.modal.signature)
     lines.extend(diverge_lines(export, dist, div))
     return lines, stability
-
-# draft note 1402
