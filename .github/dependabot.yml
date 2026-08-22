@@ -12,5 +12,3 @@ updates:
     directory: "/compiler"
     schedule:
       interval: "weekly"
-
-# draft note 1418
