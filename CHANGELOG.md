@@ -85,5 +85,3 @@ Keep a Changelog, and the project uses semantic versioning.
 ### Added
 
 - Initial repeated run export parser and path signatures.
-
-<!-- draft note 1411 -->
