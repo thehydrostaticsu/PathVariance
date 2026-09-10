@@ -24,5 +24,3 @@ where = ["src"]
 [project.urls]
 Homepage = "https://github.com/thehydrostaticsu/PathVariance"
 Source = "https://github.com/thehydrostaticsu/PathVariance"
-
-<!-- draft note 1429 -->
