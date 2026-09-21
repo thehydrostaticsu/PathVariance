@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Palette reason: runs spreading from one origin. Ink lifted to #e6edf3 carries
+  the structural text on #0d1117; the teal modal lane lifted to #4fb3b3 is the
+  route most runs share; the single accent, amber lifted to #d98a3d, marks the
+  divergence, the thing the reader looks at first. Greys are neutrals only.
+  Contrast on #0d1117: ink 14.6:1, teal 8.2:1, amber 7.1:1, muted 6.3:1.
+  Grid: every edge and baseline on a multiple of 4. No glow, no blur, no
+  gradients as decoration. Motion: none.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 360" role="img"
+     aria-labelledby="bannerTitle bannerDesc" width="1400" height="360">
+  <title id="bannerTitle">PathVariance banner</title>
+  <desc id="bannerDesc">PathVariance, measuring whether an agent takes the same
+    tool path twice. Three lanes leave one origin; the modal lane is teal and
+    two diverge in amber, beside the distribution summary.</desc>
+
+  <rect x="0" y="0" width="1400" height="360" rx="16" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+
+  <text x="64" y="96" font-family="-apple-system, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif" font-size="60" font-weight="700"><tspan fill="#e6edf3">path</tspan><tspan fill="#4fb3b3">variance</tspan></text>
+
+  <text x="64" y="146" font-family="-apple-system, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif" font-size="23" fill="#e6edf3">Measure whether an agent solves the same task the same way twice</text>
+  <text x="64" y="176" font-family="-apple-system, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#8b949e">Path signatures. Entropy. Divergence. A minimum-run stability gate.</text>
+
+  <text x="64" y="252" font-family="&quot;Cascadia Mono&quot;, Consolas, monospace" font-size="15" fill="#8b949e">v1.0.2</text>
+  <text x="150" y="252" font-family="&quot;Cascadia Mono&quot;, Consolas, monospace" font-size="15" fill="#8b949e">MIT</text>
+  <text x="210" y="252" font-family="&quot;Cascadia Mono&quot;, Consolas, monospace" font-size="15" fill="#8b949e">Python 3.11+</text>
+
+  <text x="64" y="308" font-family="&quot;Cascadia Mono&quot;, Consolas, monospace" font-size="16" fill="#e6edf3">modal 66.7%  entropy 1.252 bits  diverge at step 2</text>
+
+  <rect x="820" y="56" width="516" height="248" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="852" y="96" font-family="&quot;Cascadia Mono&quot;, Consolas, monospace" font-size="16" fill="#8b949e">12 runs, 3 paths</text>
+  <line x1="852" y1="112" x2="1304" y2="112" stroke="#30363d" stroke-width="1"/>
+
+  <circle cx="872" cy="160" r="7" fill="none" stroke="#e6edf3" stroke-width="2"/>
+  <line x1="879" y1="160" x2="1304" y2="160" stroke="#4fb3b3" stroke-width="3"/>
+  <text x="1304" y="148" text-anchor="end" font-family="&quot;Cascadia Mono&quot;, Consolas, monospace" font-size="14" fill="#4fb3b3">A  66.7%  grep-read-edit-test</text>
+
+  <line x1="879" y1="160" x2="1000" y2="160" stroke="#4fb3b3" stroke-width="3"/>
+  <line x1="1000" y1="160" x2="1304" y2="204" stroke="#d98a3d" stroke-width="3"/>
+  <text x="1304" y="222" text-anchor="end" font-family="&quot;Cascadia Mono&quot;, Consolas, monospace" font-size="14" fill="#d98a3d">B  16.7%  read again first</text>
+
+  <line x1="1000" y1="160" x2="1304" y2="260" stroke="#8b949e" stroke-width="3"/>
+  <text x="1304" y="278" text-anchor="end" font-family="&quot;Cascadia Mono&quot;, Consolas, monospace" font-size="14" fill="#8b949e">C  16.7%  test before edit</text>
+</svg>

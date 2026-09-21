@@ -1,4 +1,10 @@
+<div align="center">
+
+<img src="docs/assets/banner.svg" width="100%" alt="PathVariance banner: three lanes leaving one origin, the modal lane teal and two diverging in amber, with the distribution summary." />
+
 # PathVariance
+
+</div>
 
 *Measure whether an agent solves the same task the same way twice.*
 
