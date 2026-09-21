@@ -8,6 +8,7 @@ Keep a Changelog, and the project uses semantic versioning.
 ### Changed
 
 - Normalised entropy wording is under review for the next patch.
+- A per-step agreement chart is being sketched.
 
 ## [1.0.2] - 2026-06-23
 
